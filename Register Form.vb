@@ -1,61 +1,47 @@
-﻿Partial Public Class Register_Form ' <-- change "Register" to the exact class name from Register Form.Designer.vb
+﻿Partial Public Class Register_Form
+    Private ReadOnly db As New DatabaseHelper("login.db")
+
     Public Sub New()
         InitializeComponent()
     End Sub
 
-    Private Sub txtFName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
+    Private Sub BtnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        Dim fname As String = txtFName.Text.Trim()
+        Dim mname As String = txtMName.Text.Trim()
+        Dim lname As String = txtLName.Text.Trim()
+        Dim gender As String = If(RadioButtonMale.Checked, "Male", If(RadioButtonFemale.Checked, "Female", ""))
+        Dim username As String = txtboxUsername.Text.Trim()
+        Dim password As String = txtboxPassword.Text.Trim()
+        Dim confirmPin As String = txtboxConfirmPIN.Text.Trim()
+        Dim birthdate As Date = DateTimePicker1.Value
 
+        ' Validation
+        If String.IsNullOrEmpty(fname) OrElse String.IsNullOrEmpty(lname) OrElse
+           String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(password) Then
+            MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        If password <> confirmPin Then
+            MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        ' Save to database
+        If db.RegisterUser(fname, mname, lname, gender, birthdate, username, password) Then
+            MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+        Else
+            MessageBox.Show("Registration failed. Username may already exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
-    Private Sub txtMName_TextChanged(sender As Object, e As EventArgs) Handles txtMName.TextChanged
-
-    End Sub
-
-    Private Sub txtLName_TextChanged(sender As Object, e As EventArgs) Handles txtLName.TextChanged
-
-    End Sub
-
-    Private Sub RadioButtonMale_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonMale.CheckedChanged
-
-    End Sub
-
-    Private Sub RadioButtonFemale_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonFemale.CheckedChanged
-
-    End Sub
-
-    Private Sub lblGender_Click(sender As Object, e As EventArgs) Handles lblGender.Click
-
-    End Sub
-
-    Private Sub PictureUser_Click(sender As Object, e As EventArgs) Handles PictureUser.Click
-
-    End Sub
-
-    Private Sub txtboxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtboxUsername.TextChanged
-
-    End Sub
-
-    Private Sub txtboxPassword_TextChanged(sender As Object, e As EventArgs) Handles txtboxPassword.TextChanged
-
-    End Sub
-
-    Private Sub txtboxConfirmPIN_TextChanged(sender As Object, e As EventArgs) Handles txtboxConfirmPIN.TextChanged
-
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
     End Sub
 
     Private Sub CheckBoxShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxShowPass.CheckedChanged
-
-    End Sub
-
-    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-
-    End Sub
-
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-
-    End Sub
-
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-
+        txtboxPassword.UseSystemPasswordChar = Not CheckBoxShowPass.Checked
+        txtboxConfirmPIN.UseSystemPasswordChar = Not CheckBoxShowPass.Checked
     End Sub
 End Class

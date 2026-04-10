@@ -387,5 +387,5 @@ Partial Class Register_Form
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnUpload As Button
 
-  
+
 End Class
