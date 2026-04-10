@@ -222,16 +222,16 @@
     <Compile Include="frmregister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Total Items.Designer.vb">
-      <DependentUpon>Total Items.vb</DependentUpon>
+    <Compile Include="frmtotalitems.Designer.vb">
+      <DependentUpon>frmtotalitems.vb</DependentUpon>
     </Compile>
-    <Compile Include="Total Items.vb">
+    <Compile Include="frmtotalitems.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view profile.Designer.vb">
-      <DependentUpon>view profile.vb</DependentUpon>
+    <Compile Include="frmviewprofile.Designer.vb">
+      <DependentUpon>frmviewprofile.vb</DependentUpon>
     </Compile>
-    <Compile Include="view profile.vb">
+    <Compile Include="frmviewprofile.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -263,11 +263,11 @@
     <EmbeddedResource Include="frmregister.resx">
       <DependentUpon>frmregister.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Total Items.resx">
-      <DependentUpon>Total Items.vb</DependentUpon>
+    <EmbeddedResource Include="frmtotalitems.resx">
+      <DependentUpon>frmtotalitems.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view profile.resx">
-      <DependentUpon>view profile.vb</DependentUpon>
+    <EmbeddedResource Include="frmviewprofile.resx">
+      <DependentUpon>frmviewprofile.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

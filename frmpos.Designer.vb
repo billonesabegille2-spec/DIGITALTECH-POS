@@ -26,38 +26,39 @@ Partial Class frmpos
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.lblMenu = New System.Windows.Forms.Label()
         Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.btnthigh = New System.Windows.Forms.Button()
         Me.lblPrice = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.lblThigh = New System.Windows.Forms.Label()
         Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.btndrumstick = New System.Windows.Forms.Button()
         Me.lblPriceDS = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.lblDrumStick = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.btnpitso = New System.Windows.Forms.Button()
         Me.lblPriceP = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.lblBreast = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.btnwings = New System.Windows.Forms.Button()
         Me.lblPriceW = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.lblWings = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.btnneck = New System.Windows.Forms.Button()
         Me.lblPriceN = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.lblNeck = New System.Windows.Forms.Label()
         Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.btnhalf = New System.Windows.Forms.Button()
         Me.lblPriceHC = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.lblHalf = New System.Windows.Forms.Label()
         Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.btnhita = New System.Windows.Forms.Button()
         Me.lblTP = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.lblHita = New System.Windows.Forms.Label()
         Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.BTNWHOLE = New System.Windows.Forms.Button()
         Me.lblPriceWC = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblWhole = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -72,12 +73,10 @@ Partial Class frmpos
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.listboxItem = New System.Windows.Forms.ListBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btndot = New System.Windows.Forms.Button()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblMenu = New System.Windows.Forms.Label()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.btndot = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -145,16 +144,40 @@ Partial Class frmpos
         Me.Panel11.Size = New System.Drawing.Size(547, 390)
         Me.Panel11.TabIndex = 8
         '
+        'lblMenu
+        '
+        Me.lblMenu.AutoSize = True
+        Me.lblMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMenu.ForeColor = System.Drawing.Color.White
+        Me.lblMenu.Location = New System.Drawing.Point(14, 17)
+        Me.lblMenu.Name = "lblMenu"
+        Me.lblMenu.Size = New System.Drawing.Size(40, 16)
+        Me.lblMenu.TabIndex = 9
+        Me.lblMenu.Text = "Menu"
+        '
         'Panel19
         '
         Me.Panel19.BackColor = System.Drawing.Color.Gold
+        Me.Panel19.Controls.Add(Me.btnthigh)
         Me.Panel19.Controls.Add(Me.lblPrice)
         Me.Panel19.Controls.Add(Me.PictureBox8)
-        Me.Panel19.Controls.Add(Me.lblThigh)
         Me.Panel19.Location = New System.Drawing.Point(398, 189)
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Size = New System.Drawing.Size(127, 116)
         Me.Panel19.TabIndex = 8
+        '
+        'btnthigh
+        '
+        Me.btnthigh.BackColor = System.Drawing.Color.White
+        Me.btnthigh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnthigh.Font = New System.Drawing.Font("Sitka Heading", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnthigh.ForeColor = System.Drawing.Color.Red
+        Me.btnthigh.Location = New System.Drawing.Point(7, 5)
+        Me.btnthigh.Name = "btnthigh"
+        Me.btnthigh.Size = New System.Drawing.Size(60, 29)
+        Me.btnthigh.TabIndex = 16
+        Me.btnthigh.Text = "THIGH"
+        Me.btnthigh.UseVisualStyleBackColor = False
         '
         'lblPrice
         '
@@ -177,28 +200,29 @@ Partial Class frmpos
         Me.PictureBox8.TabIndex = 10
         Me.PictureBox8.TabStop = False
         '
-        'lblThigh
-        '
-        Me.lblThigh.AutoSize = True
-        Me.lblThigh.BackColor = System.Drawing.Color.White
-        Me.lblThigh.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblThigh.ForeColor = System.Drawing.Color.Red
-        Me.lblThigh.Location = New System.Drawing.Point(3, 0)
-        Me.lblThigh.Name = "lblThigh"
-        Me.lblThigh.Size = New System.Drawing.Size(56, 21)
-        Me.lblThigh.TabIndex = 9
-        Me.lblThigh.Text = "THIGH"
-        '
         'Panel18
         '
         Me.Panel18.BackColor = System.Drawing.Color.Gold
+        Me.Panel18.Controls.Add(Me.btndrumstick)
         Me.Panel18.Controls.Add(Me.lblPriceDS)
         Me.Panel18.Controls.Add(Me.PictureBox7)
-        Me.Panel18.Controls.Add(Me.lblDrumStick)
         Me.Panel18.Location = New System.Drawing.Point(398, 43)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Size = New System.Drawing.Size(127, 114)
         Me.Panel18.TabIndex = 7
+        '
+        'btndrumstick
+        '
+        Me.btndrumstick.BackColor = System.Drawing.Color.White
+        Me.btndrumstick.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btndrumstick.Font = New System.Drawing.Font("Sitka Heading", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndrumstick.ForeColor = System.Drawing.Color.Red
+        Me.btndrumstick.Location = New System.Drawing.Point(6, 3)
+        Me.btndrumstick.Name = "btndrumstick"
+        Me.btndrumstick.Size = New System.Drawing.Size(82, 29)
+        Me.btndrumstick.TabIndex = 18
+        Me.btndrumstick.Text = "DRUMSTICK"
+        Me.btndrumstick.UseVisualStyleBackColor = False
         '
         'lblPriceDS
         '
@@ -221,28 +245,29 @@ Partial Class frmpos
         Me.PictureBox7.TabIndex = 10
         Me.PictureBox7.TabStop = False
         '
-        'lblDrumStick
-        '
-        Me.lblDrumStick.AutoSize = True
-        Me.lblDrumStick.BackColor = System.Drawing.Color.White
-        Me.lblDrumStick.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDrumStick.ForeColor = System.Drawing.Color.Red
-        Me.lblDrumStick.Location = New System.Drawing.Point(3, 0)
-        Me.lblDrumStick.Name = "lblDrumStick"
-        Me.lblDrumStick.Size = New System.Drawing.Size(94, 21)
-        Me.lblDrumStick.TabIndex = 9
-        Me.lblDrumStick.Text = "DRUMSTICK"
-        '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.Gold
+        Me.Panel12.Controls.Add(Me.btnpitso)
         Me.Panel12.Controls.Add(Me.lblPriceP)
         Me.Panel12.Controls.Add(Me.PictureBox6)
-        Me.Panel12.Controls.Add(Me.lblBreast)
         Me.Panel12.Location = New System.Drawing.Point(265, 189)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(127, 116)
         Me.Panel12.TabIndex = 6
+        '
+        'btnpitso
+        '
+        Me.btnpitso.BackColor = System.Drawing.Color.White
+        Me.btnpitso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpitso.Font = New System.Drawing.Font("Sitka Heading", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnpitso.ForeColor = System.Drawing.Color.Red
+        Me.btnpitso.Location = New System.Drawing.Point(4, 3)
+        Me.btnpitso.Name = "btnpitso"
+        Me.btnpitso.Size = New System.Drawing.Size(60, 29)
+        Me.btnpitso.TabIndex = 15
+        Me.btnpitso.Text = "PITSO"
+        Me.btnpitso.UseVisualStyleBackColor = False
         '
         'lblPriceP
         '
@@ -265,28 +290,29 @@ Partial Class frmpos
         Me.PictureBox6.TabIndex = 13
         Me.PictureBox6.TabStop = False
         '
-        'lblBreast
-        '
-        Me.lblBreast.AutoSize = True
-        Me.lblBreast.BackColor = System.Drawing.Color.White
-        Me.lblBreast.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBreast.ForeColor = System.Drawing.Color.Red
-        Me.lblBreast.Location = New System.Drawing.Point(3, 0)
-        Me.lblBreast.Name = "lblBreast"
-        Me.lblBreast.Size = New System.Drawing.Size(51, 21)
-        Me.lblBreast.TabIndex = 12
-        Me.lblBreast.Text = "PITSO"
-        '
         'Panel13
         '
         Me.Panel13.BackColor = System.Drawing.Color.Gold
+        Me.Panel13.Controls.Add(Me.btnwings)
         Me.Panel13.Controls.Add(Me.lblPriceW)
         Me.Panel13.Controls.Add(Me.PictureBox5)
-        Me.Panel13.Controls.Add(Me.lblWings)
         Me.Panel13.Location = New System.Drawing.Point(135, 189)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(124, 116)
         Me.Panel13.TabIndex = 5
+        '
+        'btnwings
+        '
+        Me.btnwings.BackColor = System.Drawing.Color.White
+        Me.btnwings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnwings.Font = New System.Drawing.Font("Sitka Heading", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnwings.ForeColor = System.Drawing.Color.Red
+        Me.btnwings.Location = New System.Drawing.Point(3, 3)
+        Me.btnwings.Name = "btnwings"
+        Me.btnwings.Size = New System.Drawing.Size(60, 29)
+        Me.btnwings.TabIndex = 17
+        Me.btnwings.Text = "WINGS"
+        Me.btnwings.UseVisualStyleBackColor = False
         '
         'lblPriceW
         '
@@ -309,28 +335,29 @@ Partial Class frmpos
         Me.PictureBox5.TabIndex = 12
         Me.PictureBox5.TabStop = False
         '
-        'lblWings
-        '
-        Me.lblWings.AutoSize = True
-        Me.lblWings.BackColor = System.Drawing.Color.White
-        Me.lblWings.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWings.ForeColor = System.Drawing.Color.Red
-        Me.lblWings.Location = New System.Drawing.Point(3, 0)
-        Me.lblWings.Name = "lblWings"
-        Me.lblWings.Size = New System.Drawing.Size(58, 21)
-        Me.lblWings.TabIndex = 11
-        Me.lblWings.Text = "WINGS"
-        '
         'Panel14
         '
         Me.Panel14.BackColor = System.Drawing.Color.Gold
+        Me.Panel14.Controls.Add(Me.btnneck)
         Me.Panel14.Controls.Add(Me.lblPriceN)
         Me.Panel14.Controls.Add(Me.PictureBox4)
-        Me.Panel14.Controls.Add(Me.lblNeck)
         Me.Panel14.Location = New System.Drawing.Point(10, 189)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(119, 116)
         Me.Panel14.TabIndex = 4
+        '
+        'btnneck
+        '
+        Me.btnneck.BackColor = System.Drawing.Color.White
+        Me.btnneck.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnneck.Font = New System.Drawing.Font("Sitka Heading", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnneck.ForeColor = System.Drawing.Color.Red
+        Me.btnneck.Location = New System.Drawing.Point(3, 3)
+        Me.btnneck.Name = "btnneck"
+        Me.btnneck.Size = New System.Drawing.Size(60, 29)
+        Me.btnneck.TabIndex = 18
+        Me.btnneck.Text = "NECK"
+        Me.btnneck.UseVisualStyleBackColor = False
         '
         'lblPriceN
         '
@@ -353,28 +380,29 @@ Partial Class frmpos
         Me.PictureBox4.TabIndex = 11
         Me.PictureBox4.TabStop = False
         '
-        'lblNeck
-        '
-        Me.lblNeck.AutoSize = True
-        Me.lblNeck.BackColor = System.Drawing.Color.White
-        Me.lblNeck.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNeck.ForeColor = System.Drawing.Color.Red
-        Me.lblNeck.Location = New System.Drawing.Point(3, 0)
-        Me.lblNeck.Name = "lblNeck"
-        Me.lblNeck.Size = New System.Drawing.Size(49, 21)
-        Me.lblNeck.TabIndex = 10
-        Me.lblNeck.Text = "NECK"
-        '
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.Gold
+        Me.Panel15.Controls.Add(Me.btnhalf)
         Me.Panel15.Controls.Add(Me.lblPriceHC)
         Me.Panel15.Controls.Add(Me.PictureBox2)
-        Me.Panel15.Controls.Add(Me.lblHalf)
         Me.Panel15.Location = New System.Drawing.Point(135, 43)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(124, 116)
         Me.Panel15.TabIndex = 3
+        '
+        'btnhalf
+        '
+        Me.btnhalf.BackColor = System.Drawing.Color.White
+        Me.btnhalf.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnhalf.Font = New System.Drawing.Font("Sitka Heading", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnhalf.ForeColor = System.Drawing.Color.Red
+        Me.btnhalf.Location = New System.Drawing.Point(7, 6)
+        Me.btnhalf.Name = "btnhalf"
+        Me.btnhalf.Size = New System.Drawing.Size(60, 29)
+        Me.btnhalf.TabIndex = 18
+        Me.btnhalf.Text = "HALF"
+        Me.btnhalf.UseVisualStyleBackColor = False
         '
         'lblPriceHC
         '
@@ -397,28 +425,29 @@ Partial Class frmpos
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
-        'lblHalf
-        '
-        Me.lblHalf.AutoSize = True
-        Me.lblHalf.BackColor = System.Drawing.Color.White
-        Me.lblHalf.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHalf.ForeColor = System.Drawing.Color.Red
-        Me.lblHalf.Location = New System.Drawing.Point(3, 0)
-        Me.lblHalf.Name = "lblHalf"
-        Me.lblHalf.Size = New System.Drawing.Size(46, 21)
-        Me.lblHalf.TabIndex = 8
-        Me.lblHalf.Text = "HALF"
-        '
         'Panel16
         '
         Me.Panel16.BackColor = System.Drawing.Color.Gold
+        Me.Panel16.Controls.Add(Me.btnhita)
         Me.Panel16.Controls.Add(Me.lblTP)
         Me.Panel16.Controls.Add(Me.PictureBox3)
-        Me.Panel16.Controls.Add(Me.lblHita)
         Me.Panel16.Location = New System.Drawing.Point(265, 43)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(127, 114)
         Me.Panel16.TabIndex = 2
+        '
+        'btnhita
+        '
+        Me.btnhita.BackColor = System.Drawing.Color.White
+        Me.btnhita.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnhita.Font = New System.Drawing.Font("Sitka Heading", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnhita.ForeColor = System.Drawing.Color.Red
+        Me.btnhita.Location = New System.Drawing.Point(6, 3)
+        Me.btnhita.Name = "btnhita"
+        Me.btnhita.Size = New System.Drawing.Size(60, 29)
+        Me.btnhita.TabIndex = 18
+        Me.btnhita.Text = "HITA"
+        Me.btnhita.UseVisualStyleBackColor = False
         '
         'lblTP
         '
@@ -441,28 +470,29 @@ Partial Class frmpos
         Me.PictureBox3.TabIndex = 10
         Me.PictureBox3.TabStop = False
         '
-        'lblHita
-        '
-        Me.lblHita.AutoSize = True
-        Me.lblHita.BackColor = System.Drawing.Color.White
-        Me.lblHita.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHita.ForeColor = System.Drawing.Color.Red
-        Me.lblHita.Location = New System.Drawing.Point(3, 0)
-        Me.lblHita.Name = "lblHita"
-        Me.lblHita.Size = New System.Drawing.Size(43, 21)
-        Me.lblHita.TabIndex = 9
-        Me.lblHita.Text = "HITA"
-        '
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.Gold
+        Me.Panel17.Controls.Add(Me.BTNWHOLE)
         Me.Panel17.Controls.Add(Me.lblPriceWC)
         Me.Panel17.Controls.Add(Me.PictureBox1)
-        Me.Panel17.Controls.Add(Me.lblWhole)
         Me.Panel17.Location = New System.Drawing.Point(10, 43)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(119, 116)
         Me.Panel17.TabIndex = 1
+        '
+        'BTNWHOLE
+        '
+        Me.BTNWHOLE.BackColor = System.Drawing.Color.White
+        Me.BTNWHOLE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNWHOLE.Font = New System.Drawing.Font("Sitka Heading", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNWHOLE.ForeColor = System.Drawing.Color.Red
+        Me.BTNWHOLE.Location = New System.Drawing.Point(7, 6)
+        Me.BTNWHOLE.Name = "BTNWHOLE"
+        Me.BTNWHOLE.Size = New System.Drawing.Size(60, 29)
+        Me.BTNWHOLE.TabIndex = 18
+        Me.BTNWHOLE.Text = "WHOLE"
+        Me.BTNWHOLE.UseVisualStyleBackColor = False
         '
         'lblPriceWC
         '
@@ -484,18 +514,6 @@ Partial Class frmpos
         Me.PictureBox1.Size = New System.Drawing.Size(71, 72)
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
-        '
-        'lblWhole
-        '
-        Me.lblWhole.AutoSize = True
-        Me.lblWhole.BackColor = System.Drawing.Color.White
-        Me.lblWhole.Font = New System.Drawing.Font("Sitka Heading", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWhole.ForeColor = System.Drawing.Color.Red
-        Me.lblWhole.Location = New System.Drawing.Point(3, 0)
-        Me.lblWhole.Name = "lblWhole"
-        Me.lblWhole.Size = New System.Drawing.Size(66, 21)
-        Me.lblWhole.TabIndex = 7
-        Me.lblWhole.Text = " WHOLE"
         '
         'Label3
         '
@@ -622,12 +640,33 @@ Partial Class frmpos
         Me.Panel3.Controls.Add(Me.lblName)
         Me.Panel3.Controls.Add(Me.PictureBox9)
         Me.Panel3.Controls.Add(Me.btnClear)
-        Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel3.Location = New System.Drawing.Point(3, 3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(190, 100)
         Me.Panel3.TabIndex = 0
+        '
+        'btndot
+        '
+        Me.btndot.BackColor = System.Drawing.Color.Firebrick
+        Me.btndot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndot.ForeColor = System.Drawing.Color.White
+        Me.btndot.Location = New System.Drawing.Point(140, 9)
+        Me.btndot.Name = "btndot"
+        Me.btndot.Size = New System.Drawing.Size(47, 28)
+        Me.btndot.TabIndex = 4
+        Me.btndot.Text = ". . ."
+        Me.btndot.UseVisualStyleBackColor = False
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(59, 12)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(52, 15)
+        Me.lblName.TabIndex = 3
+        Me.lblName.Text = "Chloie "
         '
         'PictureBox9
         '
@@ -643,57 +682,12 @@ Partial Class frmpos
         '
         Me.btnClear.BackColor = System.Drawing.Color.Gold
         Me.btnClear.Font = New System.Drawing.Font("Sitka Display", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(110, 66)
+        Me.btnClear.Location = New System.Drawing.Point(62, 63)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(77, 26)
+        Me.btnClear.Size = New System.Drawing.Size(77, 31)
         Me.btnClear.TabIndex = 1
         Me.btnClear.Text = "Clear All"
         Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Gold
-        Me.Label2.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(0, 71)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 19)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Current Order"
-        '
-        'lblMenu
-        '
-        Me.lblMenu.AutoSize = True
-        Me.lblMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMenu.ForeColor = System.Drawing.Color.White
-        Me.lblMenu.Location = New System.Drawing.Point(14, 17)
-        Me.lblMenu.Name = "lblMenu"
-        Me.lblMenu.Size = New System.Drawing.Size(40, 16)
-        Me.lblMenu.TabIndex = 9
-        Me.lblMenu.Text = "Menu"
-        '
-        'lblName
-        '
-        Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(59, 12)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(52, 15)
-        Me.lblName.TabIndex = 3
-        Me.lblName.Text = "Chloie "
-        '
-        'btndot
-        '
-        Me.btndot.BackColor = System.Drawing.Color.Firebrick
-        Me.btndot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btndot.ForeColor = System.Drawing.Color.White
-        Me.btndot.Location = New System.Drawing.Point(140, 9)
-        Me.btndot.Name = "btndot"
-        Me.btndot.Size = New System.Drawing.Size(47, 28)
-        Me.btndot.TabIndex = 4
-        Me.btndot.Text = ". . ."
-        Me.btndot.UseVisualStyleBackColor = False
         '
         'frmpos
         '
@@ -752,7 +746,6 @@ Partial Class frmpos
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnClear As Button
-    Friend WithEvents Label2 As Label
     Friend WithEvents listboxItem As ListBox
     Friend WithEvents btnPlaceOrder As Button
     Friend WithEvents lblTotal As Label
@@ -767,37 +760,37 @@ Partial Class frmpos
     Friend WithEvents Panel19 As Panel
     Friend WithEvents lblPrice As Label
     Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents lblThigh As Label
     Friend WithEvents Panel18 As Panel
     Friend WithEvents lblPriceDS As Label
     Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents lblDrumStick As Label
     Friend WithEvents Panel12 As Panel
     Friend WithEvents lblPriceP As Label
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents lblBreast As Label
     Friend WithEvents Panel13 As Panel
     Friend WithEvents lblPriceW As Label
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents lblWings As Label
     Friend WithEvents Panel14 As Panel
     Friend WithEvents lblPriceN As Label
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents lblNeck As Label
     Friend WithEvents Panel15 As Panel
     Friend WithEvents lblPriceHC As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents lblHalf As Label
     Friend WithEvents Panel16 As Panel
     Friend WithEvents lblTP As Label
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents lblHita As Label
     Friend WithEvents Panel17 As Panel
     Friend WithEvents lblPriceWC As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lblWhole As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents lblMenu As Label
     Friend WithEvents lblName As Label
     Friend WithEvents btndot As Button
+    Friend WithEvents btnpitso As Button
+    Friend WithEvents btnthigh As Button
+    Friend WithEvents btndrumstick As Button
+    Friend WithEvents btnwings As Button
+    Friend WithEvents btnneck As Button
+    Friend WithEvents btnhalf As Button
+    Friend WithEvents btnhita As Button
+    Friend WithEvents BTNWHOLE As Button
 End Class
