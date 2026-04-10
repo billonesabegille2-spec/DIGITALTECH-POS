@@ -58,7 +58,6 @@ Partial Class frmpos
         Me.lblPriceWC = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblWhole = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -71,11 +70,13 @@ Partial Class frmpos
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnPlaceOrder = New System.Windows.Forms.Button()
         Me.lblTotal = New System.Windows.Forms.Label()
-        Me.Item = New System.Windows.Forms.ListBox()
+        Me.listboxItem = New System.Windows.Forms.ListBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblMenu = New System.Windows.Forms.Label()
+        Me.lblpeso = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -129,6 +130,7 @@ Partial Class frmpos
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel11.Controls.Add(Me.lblMenu)
         Me.Panel11.Controls.Add(Me.Panel19)
         Me.Panel11.Controls.Add(Me.Panel18)
         Me.Panel11.Controls.Add(Me.Panel12)
@@ -137,7 +139,6 @@ Partial Class frmpos
         Me.Panel11.Controls.Add(Me.Panel15)
         Me.Panel11.Controls.Add(Me.Panel16)
         Me.Panel11.Controls.Add(Me.Panel17)
-        Me.Panel11.Controls.Add(Me.Button1)
         Me.Panel11.Location = New System.Drawing.Point(8, 8)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(547, 390)
@@ -495,16 +496,6 @@ Partial Class frmpos
         Me.lblWhole.TabIndex = 7
         Me.lblWhole.Text = " WHOLE"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Yellow
-        Me.Button1.Location = New System.Drawing.Point(10, 15)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Menu"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -584,9 +575,10 @@ Partial Class frmpos
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel4.Controls.Add(Me.lblpeso)
         Me.Panel4.Controls.Add(Me.btnPlaceOrder)
         Me.Panel4.Controls.Add(Me.lblTotal)
-        Me.Panel4.Controls.Add(Me.Item)
+        Me.Panel4.Controls.Add(Me.listboxItem)
         Me.Panel4.Controls.Add(Me.Panel3)
         Me.Panel4.Location = New System.Drawing.Point(578, 12)
         Me.Panel4.Name = "Panel4"
@@ -611,17 +603,17 @@ Partial Class frmpos
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.Location = New System.Drawing.Point(17, 363)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(36, 13)
+        Me.lblTotal.Size = New System.Drawing.Size(40, 13)
         Me.lblTotal.TabIndex = 2
-        Me.lblTotal.Text = "Total"
+        Me.lblTotal.Text = "Total "
         '
-        'Item
+        'listboxItem
         '
-        Me.Item.FormattingEnabled = True
-        Me.Item.Location = New System.Drawing.Point(6, 109)
-        Me.Item.Name = "Item"
-        Me.Item.Size = New System.Drawing.Size(187, 251)
-        Me.Item.TabIndex = 1
+        Me.listboxItem.FormattingEnabled = True
+        Me.listboxItem.Location = New System.Drawing.Point(6, 109)
+        Me.listboxItem.Name = "listboxItem"
+        Me.listboxItem.Size = New System.Drawing.Size(187, 251)
+        Me.listboxItem.TabIndex = 1
         '
         'Panel3
         '
@@ -668,6 +660,27 @@ Partial Class frmpos
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Current Order"
         '
+        'lblMenu
+        '
+        Me.lblMenu.AutoSize = True
+        Me.lblMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMenu.ForeColor = System.Drawing.Color.White
+        Me.lblMenu.Location = New System.Drawing.Point(14, 17)
+        Me.lblMenu.Name = "lblMenu"
+        Me.lblMenu.Size = New System.Drawing.Size(40, 16)
+        Me.lblMenu.TabIndex = 9
+        Me.lblMenu.Text = "Menu"
+        '
+        'lblpeso
+        '
+        Me.lblpeso.AutoSize = True
+        Me.lblpeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblpeso.Location = New System.Drawing.Point(128, 363)
+        Me.lblpeso.Name = "lblpeso"
+        Me.lblpeso.Size = New System.Drawing.Size(19, 13)
+        Me.lblpeso.TabIndex = 4
+        Me.lblpeso.Text = " ₱"
+        '
         'frmpos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -684,6 +697,7 @@ Partial Class frmpos
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
         Me.Panel19.ResumeLayout(False)
         Me.Panel19.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -725,7 +739,7 @@ Partial Class frmpos
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnClear As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Item As ListBox
+    Friend WithEvents listboxItem As ListBox
     Friend WithEvents btnPlaceOrder As Button
     Friend WithEvents lblTotal As Label
     Friend WithEvents Panel5 As Panel
@@ -768,6 +782,7 @@ Partial Class frmpos
     Friend WithEvents lblPriceWC As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblWhole As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents lblMenu As Label
+    Friend WithEvents lblpeso As Label
 End Class
