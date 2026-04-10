@@ -28,6 +28,9 @@ Partial Class view_profile
         Me.lblGender = New System.Windows.Forms.Label()
         Me.lblBirthday = New System.Windows.Forms.Label()
         Me.lblAge = New System.Windows.Forms.Label()
+        Me.btnEditProfile = New System.Windows.Forms.Button()
+        Me.btnLog = New System.Windows.Forms.Button()
+        Me.lblViewProfile = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -36,6 +39,7 @@ Partial Class view_profile
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel1.Controls.Add(Me.btnEditProfile)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(0, -12)
         Me.Panel1.Name = "Panel1"
@@ -93,11 +97,46 @@ Partial Class view_profile
         Me.lblAge.TabIndex = 2
         Me.lblAge.Text = "Age:"
         '
+        'btnEditProfile
+        '
+        Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditProfile.ForeColor = System.Drawing.Color.Firebrick
+        Me.btnEditProfile.Location = New System.Drawing.Point(43, 246)
+        Me.btnEditProfile.Name = "btnEditProfile"
+        Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
+        Me.btnEditProfile.TabIndex = 1
+        Me.btnEditProfile.Text = "EDIT PROFILE"
+        Me.btnEditProfile.UseVisualStyleBackColor = True
+        '
+        'btnLog
+        '
+        Me.btnLog.BackColor = System.Drawing.Color.Firebrick
+        Me.btnLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLog.ForeColor = System.Drawing.Color.White
+        Me.btnLog.Location = New System.Drawing.Point(403, 256)
+        Me.btnLog.Name = "btnLog"
+        Me.btnLog.Size = New System.Drawing.Size(75, 32)
+        Me.btnLog.TabIndex = 2
+        Me.btnLog.Text = "LOG OUT"
+        Me.btnLog.UseVisualStyleBackColor = False
+        '
+        'lblViewProfile
+        '
+        Me.lblViewProfile.AutoSize = True
+        Me.lblViewProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblViewProfile.Location = New System.Drawing.Point(219, 25)
+        Me.lblViewProfile.Name = "lblViewProfile"
+        Me.lblViewProfile.Size = New System.Drawing.Size(89, 16)
+        Me.lblViewProfile.TabIndex = 3
+        Me.lblViewProfile.Text = "View Profile"
+        '
         'view_profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(500, 300)
+        Me.Controls.Add(Me.lblViewProfile)
+        Me.Controls.Add(Me.btnLog)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -108,6 +147,7 @@ Partial Class view_profile
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -117,4 +157,7 @@ Partial Class view_profile
     Friend WithEvents lblAge As Label
     Friend WithEvents lblBirthday As Label
     Friend WithEvents lblGender As Label
+    Friend WithEvents btnEditProfile As Button
+    Friend WithEvents btnLog As Button
+    Friend WithEvents lblViewProfile As Label
 End Class
