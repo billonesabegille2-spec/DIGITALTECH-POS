@@ -227,6 +227,12 @@
     <Compile Include="Register Form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Total Items.Designer.vb">
+      <DependentUpon>Total Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Total Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view profile.Designer.vb">
       <DependentUpon>view profile.vb</DependentUpon>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register Form.resx">
       <DependentUpon>Register Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Total Items.resx">
+      <DependentUpon>Total Items.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view profile.resx">
       <DependentUpon>view profile.vb</DependentUpon>
