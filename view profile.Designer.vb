@@ -24,13 +24,14 @@ Partial Class view_profile
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblGender = New System.Windows.Forms.Label()
         Me.lblBirthday = New System.Windows.Forms.Label()
         Me.lblAge = New System.Windows.Forms.Label()
         Me.btnEditProfile = New System.Windows.Forms.Button()
         Me.btnLog = New System.Windows.Forms.Button()
         Me.lblViewProfile = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblGoBack = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,16 +57,6 @@ Partial Class view_profile
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(227, 150)
         Me.Panel2.TabIndex = 1
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x6121
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'lblGender
         '
@@ -130,11 +121,33 @@ Partial Class view_profile
         Me.lblViewProfile.TabIndex = 3
         Me.lblViewProfile.Text = "View Profile"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x6121
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'lblGoBack
+        '
+        Me.lblGoBack.AutoSize = True
+        Me.lblGoBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGoBack.ForeColor = System.Drawing.Color.Firebrick
+        Me.lblGoBack.Location = New System.Drawing.Point(438, 27)
+        Me.lblGoBack.Name = "lblGoBack"
+        Me.lblGoBack.Size = New System.Drawing.Size(56, 13)
+        Me.lblGoBack.TabIndex = 4
+        Me.lblGoBack.Text = "Go Back"
+        '
         'view_profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(500, 300)
+        Me.Controls.Add(Me.lblGoBack)
         Me.Controls.Add(Me.lblViewProfile)
         Me.Controls.Add(Me.btnLog)
         Me.Controls.Add(Me.Panel2)
@@ -160,4 +173,5 @@ Partial Class view_profile
     Friend WithEvents btnEditProfile As Button
     Friend WithEvents btnLog As Button
     Friend WithEvents lblViewProfile As Label
+    Friend WithEvents lblGoBack As Label
 End Class
