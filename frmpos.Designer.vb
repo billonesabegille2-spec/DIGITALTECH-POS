@@ -76,7 +76,8 @@ Partial Class frmpos
         Me.btnClear = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblMenu = New System.Windows.Forms.Label()
-        Me.lblpeso = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.btndot = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -575,7 +576,6 @@ Partial Class frmpos
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Panel4.Controls.Add(Me.lblpeso)
         Me.Panel4.Controls.Add(Me.btnPlaceOrder)
         Me.Panel4.Controls.Add(Me.lblTotal)
         Me.Panel4.Controls.Add(Me.listboxItem)
@@ -603,9 +603,9 @@ Partial Class frmpos
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.Location = New System.Drawing.Point(17, 363)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(40, 13)
+        Me.lblTotal.Size = New System.Drawing.Size(144, 13)
         Me.lblTotal.TabIndex = 2
-        Me.lblTotal.Text = "Total "
+        Me.lblTotal.Text = "Total                         ₱"
         '
         'listboxItem
         '
@@ -618,6 +618,8 @@ Partial Class frmpos
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel3.Controls.Add(Me.btndot)
+        Me.Panel3.Controls.Add(Me.lblName)
         Me.Panel3.Controls.Add(Me.PictureBox9)
         Me.Panel3.Controls.Add(Me.btnClear)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -671,15 +673,27 @@ Partial Class frmpos
         Me.lblMenu.TabIndex = 9
         Me.lblMenu.Text = "Menu"
         '
-        'lblpeso
+        'lblName
         '
-        Me.lblpeso.AutoSize = True
-        Me.lblpeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblpeso.Location = New System.Drawing.Point(128, 363)
-        Me.lblpeso.Name = "lblpeso"
-        Me.lblpeso.Size = New System.Drawing.Size(19, 13)
-        Me.lblpeso.TabIndex = 4
-        Me.lblpeso.Text = " ₱"
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(59, 12)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(52, 15)
+        Me.lblName.TabIndex = 3
+        Me.lblName.Text = "Chloie "
+        '
+        'btndot
+        '
+        Me.btndot.BackColor = System.Drawing.Color.Firebrick
+        Me.btndot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndot.ForeColor = System.Drawing.Color.White
+        Me.btndot.Location = New System.Drawing.Point(140, 9)
+        Me.btndot.Name = "btndot"
+        Me.btndot.Size = New System.Drawing.Size(47, 28)
+        Me.btndot.TabIndex = 4
+        Me.btndot.Text = ". . ."
+        Me.btndot.UseVisualStyleBackColor = False
         '
         'frmpos
         '
@@ -784,5 +798,6 @@ Partial Class frmpos
     Friend WithEvents lblWhole As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents lblMenu As Label
-    Friend WithEvents lblpeso As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents btndot As Button
 End Class
