@@ -1,67 +1,55 @@
-﻿Imports System
-Imports System.Windows.Forms
-Imports System.Drawing
+﻿Imports System.Windows.Forms
 
 Partial Public Class Login
-    ' Initialize the database helper
+    ' Initialize the database helper pointing to your local file
     Private db As New DatabaseHelper("login.db")
 
     Public Sub New()
         InitializeComponent()
     End Sub
 
-    ' Basic Event Handlers (Can be left empty if not used)
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-    End Sub
-
-    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-    End Sub
-
+    ' Toggle password visibility
     Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
-        ' Logic to show/hide password
         txtPassword.UseSystemPasswordChar = Not chkShowPassword.Checked
     End Sub
 
+    ' Handle Login Logic
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse String.IsNullOrWhiteSpace(txtPassword.Text) Then
+            MessageBox.Show("Please enter both username and password.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         Try
             If db.ValidateLogin(txtUsername.Text, txtPassword.Text) Then
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                ' ToDo: Add code to open your Main Form here
+
+                ' Open the POS Form
+                Dim mainForm As New frmpos()
+                mainForm.Show()
+
+                ' Hide the login form
+                Me.Hide()
             Else
                 MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
-            MessageBox.Show("An error occurred: " & ex.Message)
+            MessageBox.Show("Database Error: " & ex.Message)
         End Try
     End Sub
 
+    ' Handle Navigation to Registration Form
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Try
-            ' FIX: Your RegisterUser function requires 7 arguments. 
-            ' We are passing placeholder values for fname, mname, lname, gender, and birthdate 
-            ' to satisfy the function requirements.
+            ' Create and show the registration form
+            Dim registerForm As New Register_Form()
 
-            Dim registrationSuccess As Boolean = db.RegisterUser(
-                "New",              ' fname
-                "User",             ' mname
-                "Name",             ' lname
-                "Not Specified",    ' gender
-                DateTime.Now,       ' birthdate
-                txtUsername.Text,   ' username
-                txtPassword.Text    ' password
-            )
+            ' Use ShowDialog if you want to force the user to finish registration 
+            ' before returning to login. Use .Show() if they can use both.
+            registerForm.ShowDialog()
 
-            If registrationSuccess Then
-                MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Registration failed. Username may already exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
         Catch ex As Exception
-            MessageBox.Show("Registration Error: " & ex.Message)
+            MessageBox.Show("Could not open registration form: " & ex.Message)
         End Try
-    End Sub
-
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Initialization logic when form opens
     End Sub
 End Class
