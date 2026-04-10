@@ -50,6 +50,7 @@ Partial Class Admin_Menu
         Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblDetails = New System.Windows.Forms.Label()
         Me.lblList = New System.Windows.Forms.Label()
+        Me.lblClose = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.panelUp.SuspendLayout()
         Me.PanelDown.SuspendLayout()
@@ -325,11 +326,24 @@ Partial Class Admin_Menu
         Me.lblList.TabIndex = 4
         Me.lblList.Text = "Item List"
         '
+        'lblClose
+        '
+        Me.lblClose.AutoSize = True
+        Me.lblClose.BackColor = System.Drawing.Color.Transparent
+        Me.lblClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblClose.ForeColor = System.Drawing.Color.Firebrick
+        Me.lblClose.Location = New System.Drawing.Point(716, 9)
+        Me.lblClose.Name = "lblClose"
+        Me.lblClose.Size = New System.Drawing.Size(38, 13)
+        Me.lblClose.TabIndex = 4
+        Me.lblClose.Text = "Close"
+        '
         'Admin_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblClose)
         Me.Controls.Add(Me.lblAdmin)
         Me.Controls.Add(Me.PanelDown)
         Me.Controls.Add(Me.panelUp)
@@ -378,4 +392,5 @@ Partial Class Admin_Menu
     Friend WithEvents Stock As DataGridViewTextBoxColumn
     Friend WithEvents lblDetails As Label
     Friend WithEvents lblList As Label
+    Friend WithEvents lblClose As Label
 End Class
