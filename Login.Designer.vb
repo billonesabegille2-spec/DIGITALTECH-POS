@@ -31,7 +31,6 @@ Partial Class Login
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -145,15 +144,8 @@ Partial Class Login
         Me.PictureBox1.TabStop = False
         '
         'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Uighur", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(192, 31)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Jhared Chloie Food Hub"
+        'e
+
         '
         'Login
         '
@@ -162,7 +154,6 @@ Partial Class Login
         Me.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources._657055756_1999733117585968_760099159505506197_n__2_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
