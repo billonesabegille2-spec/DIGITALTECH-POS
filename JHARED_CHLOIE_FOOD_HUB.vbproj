@@ -168,6 +168,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ChangePass.Designer.vb">
+      <DependentUpon>ChangePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePass.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="DatabaseHelper.vb" />
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -225,6 +231,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin Menu.resx">
       <DependentUpon>Admin Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePass.resx">
+      <DependentUpon>ChangePass.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
