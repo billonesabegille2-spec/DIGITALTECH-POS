@@ -651,9 +651,9 @@ Partial Class frmpos
         Me.btndot.BackColor = System.Drawing.Color.Firebrick
         Me.btndot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndot.ForeColor = System.Drawing.Color.White
-        Me.btndot.Location = New System.Drawing.Point(140, 9)
+        Me.btndot.Location = New System.Drawing.Point(152, 9)
         Me.btndot.Name = "btndot"
-        Me.btndot.Size = New System.Drawing.Size(47, 28)
+        Me.btndot.Size = New System.Drawing.Size(35, 34)
         Me.btndot.TabIndex = 4
         Me.btndot.Text = ". . ."
         Me.btndot.UseVisualStyleBackColor = False
@@ -661,10 +661,11 @@ Partial Class frmpos
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(59, 12)
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.White
+        Me.lblName.Location = New System.Drawing.Point(53, 21)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(52, 15)
+        Me.lblName.Size = New System.Drawing.Size(46, 13)
         Me.lblName.TabIndex = 3
         Me.lblName.Text = "Chloie "
         '

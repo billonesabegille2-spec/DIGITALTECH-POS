@@ -187,6 +187,7 @@
     <Compile Include="frmpos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalData.vb" />
     <Compile Include="itemquantity.Designer.vb">
       <DependentUpon>itemquantity.vb</DependentUpon>
     </Compile>
