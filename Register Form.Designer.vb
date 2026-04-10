@@ -25,10 +25,12 @@ Partial Class Register_Form
         Me.PanelRed = New System.Windows.Forms.Panel()
         Me.labelItsQuick = New System.Windows.Forms.Label()
         Me.LabelLetsGet = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelSeaShell = New System.Windows.Forms.Panel()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnUpload = New System.Windows.Forms.Button()
+        Me.PictureUser = New System.Windows.Forms.PictureBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.lblGender = New System.Windows.Forms.Label()
         Me.RadioButtonFemale = New System.Windows.Forms.RadioButton()
@@ -46,12 +48,10 @@ Partial Class Register_Form
         Me.lblLName = New System.Windows.Forms.Label()
         Me.lblMName = New System.Windows.Forms.Label()
         Me.lblFName = New System.Windows.Forms.Label()
-        Me.PictureUser = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelRed.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelSeaShell.SuspendLayout()
         CType(Me.PictureUser, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelRed
@@ -86,6 +86,16 @@ Partial Class Register_Form
         Me.LabelLetsGet.Size = New System.Drawing.Size(167, 20)
         Me.LabelLetsGet.TabIndex = 1
         Me.LabelLetsGet.Text = "Let's get you set up"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.ChatGPT_Image_Mar_25__2026__10_15_03_PM
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(17, 84)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(170, 158)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'PanelSeaShell
         '
@@ -147,6 +157,17 @@ Partial Class Register_Form
         Me.btnUpload.TabIndex = 18
         Me.btnUpload.Text = "Select Image"
         Me.btnUpload.UseVisualStyleBackColor = True
+        '
+        'PictureUser
+        '
+        Me.PictureUser.BackColor = System.Drawing.Color.Transparent
+        Me.PictureUser.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x612
+        Me.PictureUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureUser.Location = New System.Drawing.Point(395, 20)
+        Me.PictureUser.Name = "PictureUser"
+        Me.PictureUser.Size = New System.Drawing.Size(128, 97)
+        Me.PictureUser.TabIndex = 17
+        Me.PictureUser.TabStop = False
         '
         'DateTimePicker1
         '
@@ -319,27 +340,6 @@ Partial Class Register_Form
         Me.lblFName.TabIndex = 0
         Me.lblFName.Text = "First Name:"
         '
-        'PictureUser
-        '
-        Me.PictureUser.BackColor = System.Drawing.Color.Transparent
-        Me.PictureUser.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x612
-        Me.PictureUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureUser.Location = New System.Drawing.Point(395, 20)
-        Me.PictureUser.Name = "PictureUser"
-        Me.PictureUser.Size = New System.Drawing.Size(128, 97)
-        Me.PictureUser.TabIndex = 17
-        Me.PictureUser.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.ChatGPT_Image_Mar_25__2026__10_15_03_PM
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(17, 84)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(170, 158)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Register_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -352,10 +352,10 @@ Partial Class Register_Form
         Me.Text = "Register_Form"
         Me.PanelRed.ResumeLayout(False)
         Me.PanelRed.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelSeaShell.ResumeLayout(False)
         Me.PanelSeaShell.PerformLayout()
         CType(Me.PictureUser, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -387,12 +387,5 @@ Partial Class Register_Form
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnUpload As Button
 
-    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
-        Dim ofd As New OpenFileDialog
-        ofd.Filter = "Image Files|*.jpg;*.png"
-
-        If ofd.ShowDialog = DialogResult.OK Then
-            PictureBox1.Image = Image.FromFile(ofd.FileName)
-        End If
-    End Sub
+  
 End Class
