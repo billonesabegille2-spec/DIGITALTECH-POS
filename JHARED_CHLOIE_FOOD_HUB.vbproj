@@ -192,9 +192,7 @@
     <Compile Include="Register Form.Designer.vb">
       <DependentUpon>Register Form.vb</DependentUpon>
     </Compile>
-    <Compile Include="Register Form.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Register Form.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form2.resx">
