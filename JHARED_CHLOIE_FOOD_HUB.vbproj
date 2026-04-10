@@ -193,6 +193,12 @@
       <DependentUpon>Register Form.vb</DependentUpon>
     </Compile>
     <Compile Include="Register Form.vb" />
+    <Compile Include="view profile.Designer.vb">
+      <DependentUpon>view profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form2.resx">
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register Form.resx">
       <DependentUpon>Register Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view profile.resx">
+      <DependentUpon>view profile.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +310,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-2171382633-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2171382633-612x6121.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
