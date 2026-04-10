@@ -23,18 +23,18 @@ Partial Class view_profile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblGender = New System.Windows.Forms.Label()
-        Me.lblBirthday = New System.Windows.Forms.Label()
-        Me.lblAge = New System.Windows.Forms.Label()
         Me.btnEditProfile = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblAge = New System.Windows.Forms.Label()
+        Me.lblBirthday = New System.Windows.Forms.Label()
+        Me.lblGender = New System.Windows.Forms.Label()
         Me.btnLog = New System.Windows.Forms.Button()
         Me.lblViewProfile = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblGoBack = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -47,6 +47,27 @@ Partial Class view_profile
         Me.Panel1.Size = New System.Drawing.Size(207, 421)
         Me.Panel1.TabIndex = 0
         '
+        'btnEditProfile
+        '
+        Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditProfile.ForeColor = System.Drawing.Color.Firebrick
+        Me.btnEditProfile.Location = New System.Drawing.Point(43, 246)
+        Me.btnEditProfile.Name = "btnEditProfile"
+        Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
+        Me.btnEditProfile.TabIndex = 1
+        Me.btnEditProfile.Text = "EDIT PROFILE"
+        Me.btnEditProfile.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x6121
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Snow
@@ -58,15 +79,15 @@ Partial Class view_profile
         Me.Panel2.Size = New System.Drawing.Size(227, 150)
         Me.Panel2.TabIndex = 1
         '
-        'lblGender
+        'lblAge
         '
-        Me.lblGender.AutoSize = True
-        Me.lblGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGender.Location = New System.Drawing.Point(32, 31)
-        Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(58, 15)
-        Me.lblGender.TabIndex = 0
-        Me.lblGender.Text = "Gender:"
+        Me.lblAge.AutoSize = True
+        Me.lblAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAge.Location = New System.Drawing.Point(32, 104)
+        Me.lblAge.Name = "lblAge"
+        Me.lblAge.Size = New System.Drawing.Size(35, 15)
+        Me.lblAge.TabIndex = 2
+        Me.lblAge.Text = "Age:"
         '
         'lblBirthday
         '
@@ -78,26 +99,15 @@ Partial Class view_profile
         Me.lblBirthday.TabIndex = 1
         Me.lblBirthday.Text = "Birthday:"
         '
-        'lblAge
+        'lblGender
         '
-        Me.lblAge.AutoSize = True
-        Me.lblAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAge.Location = New System.Drawing.Point(32, 104)
-        Me.lblAge.Name = "lblAge"
-        Me.lblAge.Size = New System.Drawing.Size(35, 15)
-        Me.lblAge.TabIndex = 2
-        Me.lblAge.Text = "Age:"
-        '
-        'btnEditProfile
-        '
-        Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditProfile.ForeColor = System.Drawing.Color.Firebrick
-        Me.btnEditProfile.Location = New System.Drawing.Point(43, 246)
-        Me.btnEditProfile.Name = "btnEditProfile"
-        Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
-        Me.btnEditProfile.TabIndex = 1
-        Me.btnEditProfile.Text = "EDIT PROFILE"
-        Me.btnEditProfile.UseVisualStyleBackColor = True
+        Me.lblGender.AutoSize = True
+        Me.lblGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGender.Location = New System.Drawing.Point(32, 31)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(58, 15)
+        Me.lblGender.TabIndex = 0
+        Me.lblGender.Text = "Gender:"
         '
         'btnLog
         '
@@ -120,16 +130,6 @@ Partial Class view_profile
         Me.lblViewProfile.Size = New System.Drawing.Size(89, 16)
         Me.lblViewProfile.TabIndex = 3
         Me.lblViewProfile.Text = "View Profile"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x6121
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'lblGoBack
         '
@@ -156,9 +156,9 @@ Partial Class view_profile
         Me.Name = "view_profile"
         Me.Text = "view_profile"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
