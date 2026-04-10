@@ -168,6 +168,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ChangePass.Designer.vb">
+      <DependentUpon>ChangePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePass.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="DatabaseHelper.vb" />
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -179,6 +185,12 @@
       <DependentUpon>frmpos.vb</DependentUpon>
     </Compile>
     <Compile Include="frmpos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itemquantity.Designer.vb">
+      <DependentUpon>itemquantity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="itemquantity.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
@@ -210,6 +222,12 @@
     <Compile Include="frmregister.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Total Items.Designer.vb">
+      <DependentUpon>Total Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Total Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view profile.Designer.vb">
       <DependentUpon>view profile.vb</DependentUpon>
     </Compile>
@@ -221,11 +239,17 @@
     <EmbeddedResource Include="Admin Menu.resx">
       <DependentUpon>Admin Menu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePass.resx">
+      <DependentUpon>ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmpos.resx">
       <DependentUpon>frmpos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemquantity.resx">
+      <DependentUpon>itemquantity.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -238,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmregister.resx">
       <DependentUpon>frmregister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Total Items.resx">
+      <DependentUpon>Total Items.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view profile.resx">
       <DependentUpon>view profile.vb</DependentUpon>
