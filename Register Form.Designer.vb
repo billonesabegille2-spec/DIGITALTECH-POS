@@ -387,12 +387,5 @@ Partial Class Register_Form
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnUpload As Button
 
-    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
-        Dim ofd As New OpenFileDialog
-        ofd.Filter = "Image Files|*.jpg;*.png"
-
-        If ofd.ShowDialog = DialogResult.OK Then
-            PictureBox1.Image = Image.FromFile(ofd.FileName)
-        End If
-    End Sub
+  
 End Class
