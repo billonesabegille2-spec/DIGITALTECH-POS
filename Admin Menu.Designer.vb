@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Admin_Menu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,41 +20,41 @@ Partial Class Admin_Menu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnAddItem = New System.Windows.Forms.Button()
+        Me.btnCashiers = New System.Windows.Forms.Button()
         Me.btnItems = New System.Windows.Forms.Button()
         Me.lblMainMenu = New System.Windows.Forms.Label()
         Me.lbljhared = New System.Windows.Forms.Label()
         Me.panelUp = New System.Windows.Forms.Panel()
-        Me.PanelDown = New System.Windows.Forms.Panel()
-        Me.lblAdmin = New System.Windows.Forms.Label()
-        Me.btnCashiers = New System.Windows.Forms.Button()
-        Me.btnAddItem = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnSelectImage = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.lblDetails = New System.Windows.Forms.Label()
         Me.lblStock = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnSelectImage = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PanelDown = New System.Windows.Forms.Panel()
+        Me.lblList = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.pic = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblDetails = New System.Windows.Forms.Label()
-        Me.lblList = New System.Windows.Forms.Label()
+        Me.lblAdmin = New System.Windows.Forms.Label()
         Me.lblClose = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.panelUp.SuspendLayout()
-        Me.PanelDown.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelDown.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,6 +74,66 @@ Partial Class Admin_Menu
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(207, 455)
         Me.Panel1.TabIndex = 0
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(13, 415)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(101, 25)
+        Me.btnLogOut.TabIndex = 8
+        Me.btnLogOut.Text = "Log Out"
+        Me.btnLogOut.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(16, 295)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(187, 34)
+        Me.btnDelete.TabIndex = 7
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Location = New System.Drawing.Point(16, 255)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(187, 34)
+        Me.btnSave.TabIndex = 6
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.Location = New System.Drawing.Point(16, 215)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(187, 34)
+        Me.btnEdit.TabIndex = 5
+        Me.btnEdit.Text = "Edit Item"
+        Me.btnEdit.UseVisualStyleBackColor = True
+        '
+        'btnAddItem
+        '
+        Me.btnAddItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddItem.Location = New System.Drawing.Point(16, 175)
+        Me.btnAddItem.Name = "btnAddItem"
+        Me.btnAddItem.Size = New System.Drawing.Size(187, 34)
+        Me.btnAddItem.TabIndex = 4
+        Me.btnAddItem.Text = "Add Item"
+        Me.btnAddItem.UseVisualStyleBackColor = True
+        '
+        'btnCashiers
+        '
+        Me.btnCashiers.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCashiers.Location = New System.Drawing.Point(16, 135)
+        Me.btnCashiers.Name = "btnCashiers"
+        Me.btnCashiers.Size = New System.Drawing.Size(187, 34)
+        Me.btnCashiers.TabIndex = 3
+        Me.btnCashiers.Text = "Cashiers"
+        Me.btnCashiers.UseVisualStyleBackColor = True
         '
         'btnItems
         '
@@ -122,93 +182,69 @@ Partial Class Admin_Menu
         Me.panelUp.Size = New System.Drawing.Size(503, 197)
         Me.panelUp.TabIndex = 1
         '
-        'PanelDown
+        'lblDetails
         '
-        Me.PanelDown.BackColor = System.Drawing.Color.Snow
-        Me.PanelDown.Controls.Add(Me.lblList)
-        Me.PanelDown.Controls.Add(Me.DataGridView1)
-        Me.PanelDown.Location = New System.Drawing.Point(238, 230)
-        Me.PanelDown.Name = "PanelDown"
-        Me.PanelDown.Size = New System.Drawing.Size(503, 192)
-        Me.PanelDown.TabIndex = 2
+        Me.lblDetails.AutoSize = True
+        Me.lblDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDetails.Location = New System.Drawing.Point(13, 9)
+        Me.lblDetails.Name = "lblDetails"
+        Me.lblDetails.Size = New System.Drawing.Size(74, 13)
+        Me.lblDetails.TabIndex = 16
+        Me.lblDetails.Text = "Item Details"
         '
-        'lblAdmin
+        'lblStock
         '
-        Me.lblAdmin.AutoSize = True
-        Me.lblAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdmin.Location = New System.Drawing.Point(222, 8)
-        Me.lblAdmin.Name = "lblAdmin"
-        Me.lblAdmin.Size = New System.Drawing.Size(61, 13)
-        Me.lblAdmin.TabIndex = 3
-        Me.lblAdmin.Text = "Hi, Admin"
+        Me.lblStock.AutoSize = True
+        Me.lblStock.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStock.Location = New System.Drawing.Point(261, 130)
+        Me.lblStock.Name = "lblStock"
+        Me.lblStock.Size = New System.Drawing.Size(63, 13)
+        Me.lblStock.TabIndex = 15
+        Me.lblStock.Text = "Item Stock"
         '
-        'btnCashiers
+        'lblPrice
         '
-        Me.btnCashiers.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCashiers.Location = New System.Drawing.Point(16, 135)
-        Me.btnCashiers.Name = "btnCashiers"
-        Me.btnCashiers.Size = New System.Drawing.Size(187, 34)
-        Me.btnCashiers.TabIndex = 3
-        Me.btnCashiers.Text = "Cashiers"
-        Me.btnCashiers.UseVisualStyleBackColor = True
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.Location = New System.Drawing.Point(261, 79)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(61, 13)
+        Me.lblPrice.TabIndex = 14
+        Me.lblPrice.Text = "Item Price"
         '
-        'btnAddItem
+        'lblName
         '
-        Me.btnAddItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddItem.Location = New System.Drawing.Point(16, 175)
-        Me.btnAddItem.Name = "btnAddItem"
-        Me.btnAddItem.Size = New System.Drawing.Size(187, 34)
-        Me.btnAddItem.TabIndex = 4
-        Me.btnAddItem.Text = "Add Item"
-        Me.btnAddItem.UseVisualStyleBackColor = True
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(261, 29)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(37, 13)
+        Me.lblName.TabIndex = 13
+        Me.lblName.Text = "Name"
         '
-        'btnEdit
+        'TextBox3
         '
-        Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEdit.Location = New System.Drawing.Point(16, 215)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(187, 34)
-        Me.btnEdit.TabIndex = 5
-        Me.btnEdit.Text = "Edit Item"
-        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.TextBox3.Location = New System.Drawing.Point(261, 146)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(184, 29)
+        Me.TextBox3.TabIndex = 12
         '
-        'btnSave
+        'TextBox2
         '
-        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.Location = New System.Drawing.Point(16, 255)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(187, 34)
-        Me.btnSave.TabIndex = 6
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.TextBox2.Location = New System.Drawing.Point(261, 95)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(184, 29)
+        Me.TextBox2.TabIndex = 11
         '
-        'btnDelete
+        'TextBox1
         '
-        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(16, 295)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(187, 34)
-        Me.btnDelete.TabIndex = 7
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnLogOut
-        '
-        Me.btnLogOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(13, 415)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(101, 25)
-        Me.btnLogOut.TabIndex = 8
-        Me.btnLogOut.Text = "Log Out"
-        Me.btnLogOut.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(32, 34)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(125, 114)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.TextBox1.Location = New System.Drawing.Point(261, 48)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(184, 29)
+        Me.TextBox1.TabIndex = 10
         '
         'btnSelectImage
         '
@@ -222,65 +258,39 @@ Partial Class Admin_Menu
         Me.btnSelectImage.Text = "Select Image"
         Me.btnSelectImage.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'PictureBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(261, 48)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(184, 29)
-        Me.TextBox1.TabIndex = 10
+        Me.PictureBox1.Location = New System.Drawing.Point(32, 34)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(125, 114)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
-        'TextBox2
+        'PanelDown
         '
-        Me.TextBox2.Location = New System.Drawing.Point(261, 95)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(184, 29)
-        Me.TextBox2.TabIndex = 11
+        Me.PanelDown.BackColor = System.Drawing.Color.Snow
+        Me.PanelDown.Controls.Add(Me.lblList)
+        Me.PanelDown.Controls.Add(Me.DataGridView1)
+        Me.PanelDown.Location = New System.Drawing.Point(238, 230)
+        Me.PanelDown.Name = "PanelDown"
+        Me.PanelDown.Size = New System.Drawing.Size(503, 192)
+        Me.PanelDown.TabIndex = 2
         '
-        'TextBox3
+        'lblList
         '
-        Me.TextBox3.Location = New System.Drawing.Point(261, 146)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(184, 29)
-        Me.TextBox3.TabIndex = 12
-        '
-        'lblName
-        '
-        Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(261, 29)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(37, 13)
-        Me.lblName.TabIndex = 13
-        Me.lblName.Text = "Name"
-        '
-        'lblPrice
-        '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.Location = New System.Drawing.Point(261, 79)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(61, 13)
-        Me.lblPrice.TabIndex = 14
-        Me.lblPrice.Text = "Item Price"
-        '
-        'lblStock
-        '
-        Me.lblStock.AutoSize = True
-        Me.lblStock.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStock.Location = New System.Drawing.Point(261, 130)
-        Me.lblStock.Name = "lblStock"
-        Me.lblStock.Size = New System.Drawing.Size(63, 13)
-        Me.lblStock.TabIndex = 15
-        Me.lblStock.Text = "Item Stock"
+        Me.lblList.AutoSize = True
+        Me.lblList.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblList.Location = New System.Drawing.Point(13, 7)
+        Me.lblList.Name = "lblList"
+        Me.lblList.Size = New System.Drawing.Size(55, 13)
+        Me.lblList.TabIndex = 4
+        Me.lblList.Text = "Item List"
         '
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.pic, Me.Name, Me.Price, Me.Stock})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.pic, Me.ColumnItemName, Me.Price, Me.Stock})
         Me.DataGridView1.Location = New System.Drawing.Point(32, 23)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(437, 150)
@@ -291,10 +301,10 @@ Partial Class Admin_Menu
         Me.pic.HeaderText = "Item Pic"
         Me.pic.Name = "pic"
         '
-        'Name
+        'ColumnItemName
         '
-        Me.Name.HeaderText = "Name"
-        Me.Name.Name = "Name"
+        Me.ColumnItemName.HeaderText = "Name"
+        Me.ColumnItemName.Name = "ColumnItemName"
         '
         'Price
         '
@@ -306,25 +316,15 @@ Partial Class Admin_Menu
         Me.Stock.HeaderText = "Stock"
         Me.Stock.Name = "Stock"
         '
-        'lblDetails
+        'lblAdmin
         '
-        Me.lblDetails.AutoSize = True
-        Me.lblDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDetails.Location = New System.Drawing.Point(13, 9)
-        Me.lblDetails.Name = "lblDetails"
-        Me.lblDetails.Size = New System.Drawing.Size(74, 13)
-        Me.lblDetails.TabIndex = 16
-        Me.lblDetails.Text = "Item Details"
-        '
-        'lblList
-        '
-        Me.lblList.AutoSize = True
-        Me.lblList.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblList.Location = New System.Drawing.Point(13, 7)
-        Me.lblList.Name = "lblList"
-        Me.lblList.Size = New System.Drawing.Size(55, 13)
-        Me.lblList.TabIndex = 4
-        Me.lblList.Text = "Item List"
+        Me.lblAdmin.AutoSize = True
+        Me.lblAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdmin.Location = New System.Drawing.Point(222, 8)
+        Me.lblAdmin.Name = "lblAdmin"
+        Me.lblAdmin.Size = New System.Drawing.Size(61, 13)
+        Me.lblAdmin.TabIndex = 3
+        Me.lblAdmin.Text = "Hi, Admin"
         '
         'lblClose
         '
@@ -355,9 +355,9 @@ Partial Class Admin_Menu
         Me.Panel1.PerformLayout()
         Me.panelUp.ResumeLayout(False)
         Me.panelUp.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDown.ResumeLayout(False)
         Me.PanelDown.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -387,7 +387,7 @@ Partial Class Admin_Menu
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents pic As DataGridViewTextBoxColumn
-    Friend WithEvents Name As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnItemName As DataGridViewTextBoxColumn
     Friend WithEvents Price As DataGridViewTextBoxColumn
     Friend WithEvents Stock As DataGridViewTextBoxColumn
     Friend WithEvents lblDetails As Label
