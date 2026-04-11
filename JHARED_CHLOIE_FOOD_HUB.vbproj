@@ -164,9 +164,7 @@
     <Compile Include="Admin Menu.Designer.vb">
       <DependentUpon>Admin Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin Menu.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Admin Menu.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="ChangePass.Designer.vb">
       <DependentUpon>ChangePass.vb</DependentUpon>

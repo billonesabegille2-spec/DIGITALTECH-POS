@@ -83,17 +83,17 @@
     End Sub
 
     Private Sub btndot_Click(sender As Object, e As EventArgs) Handles btndot.Click
-        ' Ensure the form name matches your project (view_profile or frmviewprofile)
+
         view_profile.Show()
     End Sub
 
     Private Sub lblName_Click(sender As Object, e As EventArgs) Handles lblName.Click
-        ' Refresh just in case
+
         lblName.Text = "Cashier: " & GlobalData.CurrentUser
     End Sub
 
     Private Sub listboxItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listboxItem.SelectedIndexChanged
-        ' Optional: You can add code here to remove a clicked item
+
     End Sub
 
 End Class

@@ -2,7 +2,7 @@
 Partial Class Admin_Menu
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
+
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,12 +14,10 @@ Partial Class Admin_Menu
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
+
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
+
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -57,9 +55,7 @@ Partial Class Admin_Menu
         Me.PanelDown.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
+
         Me.Panel1.BackColor = System.Drawing.Color.Snow
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.btnDelete)
@@ -74,9 +70,7 @@ Partial Class Admin_Menu
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(207, 455)
         Me.Panel1.TabIndex = 0
-        '
-        'btnLogOut
-        '
+
         Me.btnLogOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogOut.Location = New System.Drawing.Point(13, 415)
         Me.btnLogOut.Name = "btnLogOut"
@@ -84,9 +78,7 @@ Partial Class Admin_Menu
         Me.btnLogOut.TabIndex = 8
         Me.btnLogOut.Text = "Log Out"
         Me.btnLogOut.UseVisualStyleBackColor = True
-        '
-        'btnDelete
-        '
+
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.Location = New System.Drawing.Point(16, 295)
         Me.btnDelete.Name = "btnDelete"
@@ -94,9 +86,7 @@ Partial Class Admin_Menu
         Me.btnDelete.TabIndex = 7
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnSave
-        '
+
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.Location = New System.Drawing.Point(16, 255)
         Me.btnSave.Name = "btnSave"
@@ -104,9 +94,7 @@ Partial Class Admin_Menu
         Me.btnSave.TabIndex = 6
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
-        '
-        'btnEdit
-        '
+
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.Location = New System.Drawing.Point(16, 215)
         Me.btnEdit.Name = "btnEdit"
@@ -114,9 +102,7 @@ Partial Class Admin_Menu
         Me.btnEdit.TabIndex = 5
         Me.btnEdit.Text = "Edit Item"
         Me.btnEdit.UseVisualStyleBackColor = True
-        '
-        'btnAddItem
-        '
+
         Me.btnAddItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddItem.Location = New System.Drawing.Point(16, 175)
         Me.btnAddItem.Name = "btnAddItem"
@@ -124,9 +110,7 @@ Partial Class Admin_Menu
         Me.btnAddItem.TabIndex = 4
         Me.btnAddItem.Text = "Add Item"
         Me.btnAddItem.UseVisualStyleBackColor = True
-        '
-        'btnCashiers
-        '
+
         Me.btnCashiers.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCashiers.Location = New System.Drawing.Point(16, 135)
         Me.btnCashiers.Name = "btnCashiers"
@@ -134,9 +118,7 @@ Partial Class Admin_Menu
         Me.btnCashiers.TabIndex = 3
         Me.btnCashiers.Text = "Cashiers"
         Me.btnCashiers.UseVisualStyleBackColor = True
-        '
-        'btnItems
-        '
+
         Me.btnItems.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnItems.Location = New System.Drawing.Point(16, 95)
         Me.btnItems.Name = "btnItems"
@@ -144,9 +126,7 @@ Partial Class Admin_Menu
         Me.btnItems.TabIndex = 2
         Me.btnItems.Text = "Items"
         Me.btnItems.UseVisualStyleBackColor = True
-        '
-        'lblMainMenu
-        '
+
         Me.lblMainMenu.AutoSize = True
         Me.lblMainMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMainMenu.Location = New System.Drawing.Point(10, 63)
@@ -154,9 +134,7 @@ Partial Class Admin_Menu
         Me.lblMainMenu.Size = New System.Drawing.Size(79, 15)
         Me.lblMainMenu.TabIndex = 1
         Me.lblMainMenu.Text = "Main Menu"
-        '
-        'lbljhared
-        '
+
         Me.lbljhared.AutoSize = True
         Me.lbljhared.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbljhared.Location = New System.Drawing.Point(13, 20)
@@ -164,9 +142,7 @@ Partial Class Admin_Menu
         Me.lbljhared.Size = New System.Drawing.Size(190, 15)
         Me.lbljhared.TabIndex = 0
         Me.lbljhared.Text = "JHARED CHLOIE FOOD HUB"
-        '
-        'panelUp
-        '
+
         Me.panelUp.BackColor = System.Drawing.Color.Snow
         Me.panelUp.Controls.Add(Me.lblDetails)
         Me.panelUp.Controls.Add(Me.lblStock)
@@ -181,9 +157,7 @@ Partial Class Admin_Menu
         Me.panelUp.Name = "panelUp"
         Me.panelUp.Size = New System.Drawing.Size(503, 197)
         Me.panelUp.TabIndex = 1
-        '
-        'lblDetails
-        '
+
         Me.lblDetails.AutoSize = True
         Me.lblDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDetails.Location = New System.Drawing.Point(13, 9)
@@ -191,9 +165,7 @@ Partial Class Admin_Menu
         Me.lblDetails.Size = New System.Drawing.Size(74, 13)
         Me.lblDetails.TabIndex = 16
         Me.lblDetails.Text = "Item Details"
-        '
-        'lblStock
-        '
+
         Me.lblStock.AutoSize = True
         Me.lblStock.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStock.Location = New System.Drawing.Point(261, 130)
@@ -201,9 +173,7 @@ Partial Class Admin_Menu
         Me.lblStock.Size = New System.Drawing.Size(63, 13)
         Me.lblStock.TabIndex = 15
         Me.lblStock.Text = "Item Stock"
-        '
-        'lblPrice
-        '
+
         Me.lblPrice.AutoSize = True
         Me.lblPrice.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice.Location = New System.Drawing.Point(261, 79)
@@ -211,9 +181,7 @@ Partial Class Admin_Menu
         Me.lblPrice.Size = New System.Drawing.Size(61, 13)
         Me.lblPrice.TabIndex = 14
         Me.lblPrice.Text = "Item Price"
-        '
-        'lblName
-        '
+
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(261, 29)
@@ -221,33 +189,25 @@ Partial Class Admin_Menu
         Me.lblName.Size = New System.Drawing.Size(37, 13)
         Me.lblName.TabIndex = 13
         Me.lblName.Text = "Name"
-        '
-        'TextBox3
-        '
+
         Me.TextBox3.Location = New System.Drawing.Point(261, 146)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(184, 29)
         Me.TextBox3.TabIndex = 12
-        '
-        'TextBox2
-        '
+
         Me.TextBox2.Location = New System.Drawing.Point(261, 95)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(184, 29)
         Me.TextBox2.TabIndex = 11
-        '
-        'TextBox1
-        '
+
         Me.TextBox1.Location = New System.Drawing.Point(261, 48)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(184, 29)
         Me.TextBox1.TabIndex = 10
-        '
-        'btnSelectImage
-        '
+
         Me.btnSelectImage.BackColor = System.Drawing.Color.Firebrick
         Me.btnSelectImage.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSelectImage.ForeColor = System.Drawing.Color.White
@@ -257,17 +217,13 @@ Partial Class Admin_Menu
         Me.btnSelectImage.TabIndex = 9
         Me.btnSelectImage.Text = "Select Image"
         Me.btnSelectImage.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
+
         Me.PictureBox1.Location = New System.Drawing.Point(32, 34)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(125, 114)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'PanelDown
-        '
+
         Me.PanelDown.BackColor = System.Drawing.Color.Snow
         Me.PanelDown.Controls.Add(Me.lblList)
         Me.PanelDown.Controls.Add(Me.DataGridView1)
@@ -275,9 +231,7 @@ Partial Class Admin_Menu
         Me.PanelDown.Name = "PanelDown"
         Me.PanelDown.Size = New System.Drawing.Size(503, 192)
         Me.PanelDown.TabIndex = 2
-        '
-        'lblList
-        '
+
         Me.lblList.AutoSize = True
         Me.lblList.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblList.Location = New System.Drawing.Point(13, 7)
@@ -285,9 +239,7 @@ Partial Class Admin_Menu
         Me.lblList.Size = New System.Drawing.Size(55, 13)
         Me.lblList.TabIndex = 4
         Me.lblList.Text = "Item List"
-        '
-        'DataGridView1
-        '
+
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.pic, Me.ColumnItemName, Me.Price, Me.Stock})
@@ -295,29 +247,19 @@ Partial Class Admin_Menu
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(437, 150)
         Me.DataGridView1.TabIndex = 0
-        '
-        'pic
-        '
+
         Me.pic.HeaderText = "Item Pic"
         Me.pic.Name = "pic"
-        '
-        'ColumnItemName
-        '
+
         Me.ColumnItemName.HeaderText = "Name"
         Me.ColumnItemName.Name = "ColumnItemName"
-        '
-        'Price
-        '
+
         Me.Price.HeaderText = "Price"
         Me.Price.Name = "Price"
-        '
-        'Stock
-        '
+
         Me.Stock.HeaderText = "Stock"
         Me.Stock.Name = "Stock"
-        '
-        'lblAdmin
-        '
+
         Me.lblAdmin.AutoSize = True
         Me.lblAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAdmin.Location = New System.Drawing.Point(222, 8)
@@ -325,9 +267,7 @@ Partial Class Admin_Menu
         Me.lblAdmin.Size = New System.Drawing.Size(61, 13)
         Me.lblAdmin.TabIndex = 3
         Me.lblAdmin.Text = "Hi, Admin"
-        '
-        'lblClose
-        '
+
         Me.lblClose.AutoSize = True
         Me.lblClose.BackColor = System.Drawing.Color.Transparent
         Me.lblClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -337,9 +277,7 @@ Partial Class Admin_Menu
         Me.lblClose.Size = New System.Drawing.Size(38, 13)
         Me.lblClose.TabIndex = 4
         Me.lblClose.Text = "Close"
-        '
-        'Admin_Menu
-        '
+
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
@@ -393,4 +331,5 @@ Partial Class Admin_Menu
     Friend WithEvents lblDetails As Label
     Friend WithEvents lblList As Label
     Friend WithEvents lblClose As Label
+
 End Class

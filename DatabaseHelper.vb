@@ -5,20 +5,19 @@ Public Class DatabaseHelper
     Private ReadOnly connectionString As String
 
     Public Sub New(dbPath As String)
-        ' Use the full path to ensure it's created in the correct folder
+
         Dim fullPath As String = Path.Combine(Application.StartupPath, dbPath)
         connectionString = $"Data Source={fullPath};Version=3;"
         EnsureDatabaseExists(fullPath)
     End Sub
 
     Private Sub EnsureDatabaseExists(fullPath As String)
-        ' If the file doesn't exist, create it and build the table
+
         If Not File.Exists(fullPath) Then
             SQLiteConnection.CreateFile(fullPath)
         End If
 
-        ' Even if the file exists, we run "CREATE TABLE IF NOT EXISTS" 
-        ' to ensure the Users table is there without crashing.
+
         Using conn As New SQLiteConnection(connectionString)
             conn.Open()
             Dim tableSql As String = "
@@ -60,7 +59,7 @@ Public Class DatabaseHelper
             End Using
             Return True
         Catch ex As SQLiteException When ex.ErrorCode = 19
-            Return False ' Username already exists
+            Return False
         Catch ex As Exception
             Throw ex
         End Try
