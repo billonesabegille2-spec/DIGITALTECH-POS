@@ -1,65 +1,54 @@
 ﻿Imports System.Windows.Forms
+Imports Microsoft.VisualBasic.ApplicationServices
 
-Partial Public Class Login
-    ' Initialize the database helper pointing to your local file
-    Private db As New DatabaseHelper("login.db")
+Public Class Login
+    ' Use the helper class you created
+    Dim db As New DatabaseHelper("Login db")
 
-    Public Sub New()
-        InitializeComponent()
-
-    End Sub
-
-    ' Toggle password visibility
-    Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+    ' Toggle Password Visibility
+    Private Sub ChkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+        ' Ensure your password textbox is named txtPassword
         txtPassword.UseSystemPasswordChar = Not chkShowPassword.Checked
     End Sub
 
+    ' The main Login Logic
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim username As String = txtUsername.Text
-        Dim password As String = txtPassword.Text
+        Dim user As String = txtUsername.Text
+        Dim pass As String = txtPassword.Text
 
-        ' 1. Check if fields are empty
-        If String.IsNullOrWhiteSpace(username) OrElse String.IsNullOrWhiteSpace(password) Then
-            MessageBox.Show("Please enter both username and password.")
+        ' Basic validation to ensure fields aren't empty
+        If String.IsNullOrWhiteSpace(user) OrElse String.IsNullOrWhiteSpace(pass) Then
+            MessageBox.Show("Please fill in all fields.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        ' 2. Validate against the database using your DatabaseHelper
-        If db.ValidateLogin(username, password) Then
+        ' Validate against SQLite database using your DatabaseHelper function
+        If db.ValidateLogin(user, pass) Then
+            ' Set the Global variable so other forms know who is logged in
+            GlobalData.CurrentUser = user
 
-            ' Save username to global variable
-            GlobalData.CurrentUser = username
+            ' Check if the user is the Admin
+            If user.ToLower() = "" Then
+                MessageBox.Show("Welcome back, Admin!", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' 3. Check if the user is the Admin
-            If username.ToLower() = "admin" Then
-                ' If it's the admin, go to Admin Menu
+                ' Open the Admin Menu (Ensure the form name matches your project)
                 Admin_Menu.Show()
-                MessageBox.Show("Welcome, Admin!", "Login Successful")
             Else
-                ' If it's a regular user, go to POS
+                ' If not admin, open the POS form
                 frmpos.Show()
             End If
 
-            ' Hide the login form
+            ' Hide the current login window
             Me.Hide()
         Else
-            ' Login failed
             MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
-    ' Handle Navigation to Registration Form
+    ' Open Registration Form
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Try
-            ' Create and show the registration form
-            Dim registerForm As New Register_Form()
-
-            ' Use ShowDialog if you want to force the user to finish registration 
-            ' before returning to login. Use .Show() if they can use both.
-            registerForm.ShowDialog()
-
-        Catch ex As Exception
-            MessageBox.Show("Could not open registration form: " & ex.Message)
-        End Try
+        ' Opens the Register form as a pop-up
+        Register_Form.ShowDialog()
     End Sub
+
 End Class
