@@ -22,16 +22,16 @@ Public Class DatabaseHelper
         Using conn As New SQLiteConnection(connectionString)
             conn.Open()
             Dim tableSql As String = "
-                CREATE TABLE IF NOT EXISTS Users (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    FirstName TEXT,
-                    MiddleName TEXT,
-                    LastName TEXT,
-                    Gender TEXT,
-                    Birthdate TEXT,
-                    Username TEXT NOT NULL UNIQUE,
-                    Password TEXT NOT NULL
-                );"
+                    CREATE TABLE IF NOT EXISTS Users (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        FirstName TEXT,
+                        MiddleName TEXT,
+                        LastName TEXT,
+                        Gender TEXT,
+                        Birthdate TEXT,
+                        Username TEXT NOT NULL UNIQUE,
+                        Password TEXT NOT NULL
+                    );"
             Using cmd As New SQLiteCommand(tableSql, conn)
                 cmd.ExecuteNonQuery()
             End Using
@@ -39,13 +39,13 @@ Public Class DatabaseHelper
     End Sub
 
     Public Function RegisterUser(fname As String, mname As String, lname As String,
-                                 gender As String, birthdate As Date,
-                                 username As String, password As String) As Boolean
+                                     gender As String, birthdate As Date,
+                                     username As String, password As String) As Boolean
         Try
             Using conn As New SQLiteConnection(connectionString)
                 conn.Open()
                 Dim sql As String = "INSERT INTO Users (FirstName, MiddleName, LastName, Gender, Birthdate, Username, Password) " &
-                                    "VALUES (@f, @m, @l, @g, @b, @u, @p)"
+                                        "VALUES (@f, @m, @l, @g, @b, @u, @p)"
 
                 Using cmd As New SQLiteCommand(sql, conn)
                     cmd.Parameters.AddWithValue("@f", fname)

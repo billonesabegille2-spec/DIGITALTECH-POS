@@ -30,35 +30,35 @@
 
     ' --- CHICKEN ITEM BUTTONS ---
     Private Sub BTNWHOLE_Click(sender As Object, e As EventArgs) Handles BTNWHOLE.Click
-        AddToCart("Whole Chicken", 250.0)
+        AddToCart("Whole Chicken", 230.0)
     End Sub
 
     Private Sub btnhalf_Click(sender As Object, e As EventArgs) Handles btnhalf.Click
-        AddToCart("Half Chicken", 130.0)
+        AddToCart("Half Chicken", 115.0)
     End Sub
 
     Private Sub btnhita_Click(sender As Object, e As EventArgs) Handles btnhita.Click
-        AddToCart("Hita", 85.0)
+        AddToCart("Hita", 56.0)
     End Sub
 
     Private Sub btndrumstick_Click(sender As Object, e As EventArgs) Handles btndrumstick.Click
-        AddToCart("Drumstick", 75.0)
+        AddToCart("Drumstick", 27.0)
     End Sub
 
     Private Sub btnneck_Click(sender As Object, e As EventArgs) Handles btnneck.Click
-        AddToCart("Neck", 25.0)
+        AddToCart("Neck", 12.0)
     End Sub
 
     Private Sub btnwings_Click(sender As Object, e As EventArgs) Handles btnwings.Click
-        AddToCart("Wings", 60.0)
+        AddToCart("Wings", 23.0)
     End Sub
 
     Private Sub btnpitso_Click(sender As Object, e As EventArgs) Handles btnpitso.Click
-        AddToCart("Pitso", 90.0)
+        AddToCart("Pitso", 36.0)
     End Sub
 
     Private Sub btnthigh_Click(sender As Object, e As EventArgs) Handles btnthigh.Click
-        AddToCart("Thigh", 80.0)
+        AddToCart("Thigh", 29.0)
     End Sub
 
     ' --- ACTION BUTTONS ---

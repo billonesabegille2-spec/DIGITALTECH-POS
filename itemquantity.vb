@@ -82,7 +82,7 @@
         '
         'txtInput
         '
-        Me.txtInput.Location = New System.Drawing.Point(93, 290)
+        Me.txtInput.Location = New System.Drawing.Point(115, 279)
         Me.txtInput.Name = "txtInput"
         Me.txtInput.Size = New System.Drawing.Size(154, 39)
         Me.txtInput.TabIndex = 7

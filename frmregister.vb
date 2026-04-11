@@ -43,5 +43,6 @@
     Private Sub CheckBoxShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxShowPass.CheckedChanged
         txtboxPassword.UseSystemPasswordChar = Not CheckBoxShowPass.Checked
         txtboxConfirmPIN.UseSystemPasswordChar = Not CheckBoxShowPass.Checked
+
     End Sub
 End Class

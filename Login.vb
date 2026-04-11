@@ -15,19 +15,36 @@ Partial Public Class Login
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        ' Replace "admin" with your actual database/logic check
-        If txtUsername.Text <> "" AndAlso txtPassword.Text <> "" Then
+        Dim username As String = txtUsername.Text
+        Dim password As String = txtPassword.Text
 
-            ' STEP 1: Save the username to the Global Variable
-            GlobalData.CurrentUser = txtUsername.Text
+        ' 1. Check if fields are empty
+        If String.IsNullOrWhiteSpace(username) OrElse String.IsNullOrWhiteSpace(password) Then
+            MessageBox.Show("Please enter both username and password.")
+            Exit Sub
+        End If
 
-            ' STEP 2: Open the POS form
-            frmpos.Show()
+        ' 2. Validate against the database using your DatabaseHelper
+        If db.ValidateLogin(username, password) Then
 
-            ' STEP 3: Hide the login form
+            ' Save username to global variable
+            GlobalData.CurrentUser = username
+
+            ' 3. Check if the user is the Admin
+            If username.ToLower() = "admin" Then
+                ' If it's the admin, go to Admin Menu
+                Admin_Menu.Show()
+                MessageBox.Show("Welcome, Admin!", "Login Successful")
+            Else
+                ' If it's a regular user, go to POS
+                frmpos.Show()
+            End If
+
+            ' Hide the login form
             Me.Hide()
         Else
-            MessageBox.Show("Please enter valid credentials.")
+            ' Login failed
+            MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
