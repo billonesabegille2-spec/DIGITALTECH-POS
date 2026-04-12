@@ -1,86 +1,65 @@
-﻿Public Class view_profile
+﻿Imports System.IO
 
+Public Class view_profile
+    ' Database helper instance
+    Private ReadOnly db As New DatabaseHelper("login.db")
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ' Load user data when the form opens
+    Private Sub View_profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadUserProfile()
+    End Sub
 
-        Me.Text = "Profile"
-        Me.Size = New Size(800, 400)
-        Me.StartPosition = FormStartPosition.CenterScreen
+    Private Sub LoadUserProfile()
+        ' GlobalData.CurrentUser must be set during Login
+        Dim dt As DataTable = db.GetUserDetails(GlobalData.CurrentUser)
 
+        If dt.Rows.Count > 0 Then
+            Dim row = dt.Rows(0)
 
-        Dim panelLeft As New Panel()
-        panelLeft.BackColor = Color.Firebrick
-        panelLeft.Size = New Size(250, Me.Height)
-        panelLeft.Location = New Point(0, 0)
-        Me.Controls.Add(panelLeft)
+            ' Display Data
+            lblGender.Text = "Gender: " & row("Gender").ToString()
 
+            Dim bday As Date
+            If Date.TryParse(row("Birthdate").ToString(), bday) Then
+                lblBirthday.Text = "Birthday: " & bday.ToString("MMMM dd, yyyy")
 
-        Dim picProfile As New PictureBox()
-        picProfile.Size = New Size(120, 120)
-        picProfile.Location = New Point(65, 40)
-        picProfile.SizeMode = PictureBoxSizeMode.StretchImage
-        picProfile.Image = SystemIcons.Information.ToBitmap()
-        panelLeft.Controls.Add(picProfile)
+                ' Calculate Age
+                Dim age As Integer = DateTime.Now.Year - bday.Year
+                If DateTime.Now < bday.AddYears(age) Then age -= 1
+                lblAge.Text = "Age: " & age.ToString()
+            End If
 
+            ' Load Profile Picture BLOB
+            If Not IsDBNull(row("ProfilePic")) Then
+                Dim imgData As Byte() = DirectCast(row("ProfilePic"), Byte())
+                Using ms As New MemoryStream(imgData)
+                    ' Using BackgroundImage as defined in your designer
+                    PictureBox1.BackgroundImage = Image.FromStream(ms)
+                    PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+                End Using
+            End If
+        End If
+    End Sub
 
-        Dim btnEdit As New Button()
-        btnEdit.Text = "EDIT PROFILE"
-        btnEdit.Size = New Size(150, 35)
-        btnEdit.Location = New Point(50, 180)
-        panelLeft.Controls.Add(btnEdit)
+    ' --- Event Handlers ---
 
+    Private Sub BtnLog_Click(sender As Object, e As EventArgs) Handles btnLog.Click
+        Dim result = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            Application.Restart()
+        End If
+    End Sub
 
-        Dim panelRight As New Panel()
-        panelRight.BackColor = Color.White
-        panelRight.Size = New Size(550, Me.Height)
-        panelRight.Location = New Point(250, 0)
-        Me.Controls.Add(panelRight)
+    Private Sub LblGoBack_Click(sender As Object, e As EventArgs) Handles lblGoBack.Click
+        Me.Close()
+    End Sub
 
+    ' Placeholder for Edit Profile logic
+    Private Sub BtnEditProfile_Click(sender As Object, e As EventArgs) Handles btnEditProfile.Click
+        ' Logic to open Edit_Profile form would go here
+    End Sub
 
-        Dim lblTitle As New Label()
-        lblTitle.Text = "View Profile"
-        lblTitle.Font = New Font("Arial", 14, FontStyle.Bold)
-        lblTitle.Location = New Point(20, 20)
-        panelRight.Controls.Add(lblTitle)
-
-
-        Dim lblBack As New Label()
-        lblBack.Text = "Go Back"
-        lblBack.ForeColor = Color.Red
-        lblBack.Location = New Point(450, 20)
-        panelRight.Controls.Add(lblBack)
-
-        Dim grpBox As New GroupBox()
-        grpBox.Size = New Size(300, 150)
-        grpBox.Location = New Point(100, 80)
-        panelRight.Controls.Add(grpBox)
-
-
-        Dim lblGender As New Label()
-        lblGender.Text = "Gender:"
-        lblGender.Location = New Point(20, 30)
-
-        Dim lblBirthday As New Label()
-        lblBirthday.Text = "Birthday:"
-        lblBirthday.Location = New Point(20, 60)
-
-        Dim lblAge As New Label()
-        lblAge.Text = "Age:"
-        lblAge.Location = New Point(20, 90)
-
-        grpBox.Controls.Add(lblGender)
-        grpBox.Controls.Add(lblBirthday)
-        grpBox.Controls.Add(lblAge)
-
-
-        Dim btnLogout As New Button()
-        btnLogout.Text = "LOG OUT"
-        btnLogout.BackColor = Color.Firebrick
-        btnLogout.ForeColor = Color.White
-        btnLogout.Size = New Size(100, 35)
-        btnLogout.Location = New Point(350, 250)
-        panelRight.Controls.Add(btnLogout)
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class
-   

@@ -99,4 +99,18 @@ Public Class DatabaseHelper
             Return ""
         End Try
     End Function
+    Public Function GetUserDetails(username As String) As DataTable
+        Dim dt As New DataTable()
+        Using conn As New SQLiteConnection(connectionString)
+            conn.Open()
+            Dim sql As String = "SELECT FirstName, LastName, Gender, Birthdate, ProfilePic FROM Users WHERE Username = @u"
+            Using cmd As New SQLiteCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@u", username)
+                Using adapter As New SQLiteDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
 End Class

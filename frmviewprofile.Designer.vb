@@ -1,9 +1,8 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class view_profile
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -14,13 +13,9 @@ Partial Class view_profile
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnEditProfile = New System.Windows.Forms.Button()
@@ -49,18 +44,16 @@ Partial Class view_profile
         '
         'btnEditProfile
         '
-        Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.btnEditProfile.ForeColor = System.Drawing.Color.Firebrick
         Me.btnEditProfile.Location = New System.Drawing.Point(43, 246)
         Me.btnEditProfile.Name = "btnEditProfile"
         Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
         Me.btnEditProfile.TabIndex = 1
         Me.btnEditProfile.Text = "EDIT PROFILE"
-        Me.btnEditProfile.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = Global.JHARED_CHLOIE_FOOD_HUB.My.Resources.Resources.istockphoto_2171382633_612x6121
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
         Me.PictureBox1.Name = "PictureBox1"
@@ -82,37 +75,33 @@ Partial Class view_profile
         'lblAge
         '
         Me.lblAge.AutoSize = True
-        Me.lblAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAge.Location = New System.Drawing.Point(32, 104)
         Me.lblAge.Name = "lblAge"
-        Me.lblAge.Size = New System.Drawing.Size(35, 15)
-        Me.lblAge.TabIndex = 2
+        Me.lblAge.Size = New System.Drawing.Size(29, 13)
+        Me.lblAge.TabIndex = 0
         Me.lblAge.Text = "Age:"
         '
         'lblBirthday
         '
         Me.lblBirthday.AutoSize = True
-        Me.lblBirthday.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBirthday.Location = New System.Drawing.Point(32, 69)
         Me.lblBirthday.Name = "lblBirthday"
-        Me.lblBirthday.Size = New System.Drawing.Size(63, 15)
+        Me.lblBirthday.Size = New System.Drawing.Size(48, 13)
         Me.lblBirthday.TabIndex = 1
         Me.lblBirthday.Text = "Birthday:"
         '
         'lblGender
         '
         Me.lblGender.AutoSize = True
-        Me.lblGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGender.Location = New System.Drawing.Point(32, 31)
         Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(58, 15)
-        Me.lblGender.TabIndex = 0
+        Me.lblGender.Size = New System.Drawing.Size(45, 13)
+        Me.lblGender.TabIndex = 2
         Me.lblGender.Text = "Gender:"
         '
         'btnLog
         '
         Me.btnLog.BackColor = System.Drawing.Color.Firebrick
-        Me.btnLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLog.ForeColor = System.Drawing.Color.White
         Me.btnLog.Location = New System.Drawing.Point(403, 256)
         Me.btnLog.Name = "btnLog"
@@ -123,23 +112,19 @@ Partial Class view_profile
         '
         'lblViewProfile
         '
-        Me.lblViewProfile.AutoSize = True
-        Me.lblViewProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblViewProfile.Location = New System.Drawing.Point(219, 25)
         Me.lblViewProfile.Name = "lblViewProfile"
-        Me.lblViewProfile.Size = New System.Drawing.Size(89, 16)
-        Me.lblViewProfile.TabIndex = 3
+        Me.lblViewProfile.Size = New System.Drawing.Size(100, 23)
+        Me.lblViewProfile.TabIndex = 1
         Me.lblViewProfile.Text = "View Profile"
         '
         'lblGoBack
         '
-        Me.lblGoBack.AutoSize = True
-        Me.lblGoBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGoBack.ForeColor = System.Drawing.Color.Firebrick
         Me.lblGoBack.Location = New System.Drawing.Point(438, 27)
         Me.lblGoBack.Name = "lblGoBack"
-        Me.lblGoBack.Size = New System.Drawing.Size(56, 13)
-        Me.lblGoBack.TabIndex = 4
+        Me.lblGoBack.Size = New System.Drawing.Size(100, 23)
+        Me.lblGoBack.TabIndex = 0
         Me.lblGoBack.Text = "Go Back"
         '
         'view_profile
@@ -154,13 +139,11 @@ Partial Class view_profile
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "view_profile"
-        Me.Text = "view_profile"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
