@@ -699,7 +699,7 @@ Partial Class frmpos
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmpos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

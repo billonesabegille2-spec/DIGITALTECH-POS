@@ -152,7 +152,8 @@ Partial Class Login
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
         Me.Name = "Login"
         Me.Text = "Login"
         Me.Panel1.ResumeLayout(False)

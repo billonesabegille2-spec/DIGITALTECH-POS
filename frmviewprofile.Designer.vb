@@ -39,14 +39,14 @@ Partial Class view_profile
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(0, -12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(207, 421)
+        Me.Panel1.Size = New System.Drawing.Size(207, 503)
         Me.Panel1.TabIndex = 0
         '
         'btnEditProfile
         '
         Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.btnEditProfile.ForeColor = System.Drawing.Color.Firebrick
-        Me.btnEditProfile.Location = New System.Drawing.Point(43, 246)
+        Me.btnEditProfile.Location = New System.Drawing.Point(43, 426)
         Me.btnEditProfile.Name = "btnEditProfile"
         Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
         Me.btnEditProfile.TabIndex = 1
@@ -69,13 +69,13 @@ Partial Class view_profile
         Me.Panel2.Controls.Add(Me.lblGender)
         Me.Panel2.Location = New System.Drawing.Point(241, 74)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(227, 150)
+        Me.Panel2.Size = New System.Drawing.Size(428, 343)
         Me.Panel2.TabIndex = 1
         '
         'lblAge
         '
         Me.lblAge.AutoSize = True
-        Me.lblAge.Location = New System.Drawing.Point(32, 104)
+        Me.lblAge.Location = New System.Drawing.Point(32, 163)
         Me.lblAge.Name = "lblAge"
         Me.lblAge.Size = New System.Drawing.Size(29, 13)
         Me.lblAge.TabIndex = 0
@@ -103,7 +103,7 @@ Partial Class view_profile
         '
         Me.btnLog.BackColor = System.Drawing.Color.Firebrick
         Me.btnLog.ForeColor = System.Drawing.Color.White
-        Me.btnLog.Location = New System.Drawing.Point(403, 256)
+        Me.btnLog.Location = New System.Drawing.Point(607, 445)
         Me.btnLog.Name = "btnLog"
         Me.btnLog.Size = New System.Drawing.Size(75, 32)
         Me.btnLog.TabIndex = 2
@@ -131,7 +131,7 @@ Partial Class view_profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(500, 300)
+        Me.ClientSize = New System.Drawing.Size(715, 489)
         Me.Controls.Add(Me.lblGoBack)
         Me.Controls.Add(Me.lblViewProfile)
         Me.Controls.Add(Me.btnLog)
@@ -139,6 +139,7 @@ Partial Class view_profile
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "view_profile"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)

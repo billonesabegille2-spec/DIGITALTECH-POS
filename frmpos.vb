@@ -65,12 +65,22 @@
 
     Private Sub btnPlaceOrder_Click(sender As Object, e As EventArgs) Handles btnPlaceOrder.Click
         If listboxItem.Items.Count > 0 Then
-            Dim summary As String = "Order Placed Successfully!" & vbCrLf &
-                                  "Cashier: " & GlobalData.CurrentUser & vbCrLf &
-                                  "Total: ₱" & totalAmount.ToString("N2")
+            ' Create an instance of the payment form
+            Dim paymentForm As New Total_Items()
 
-            MessageBox.Show(summary, "JHARED CHLOIE FOOD HUB")
-            btnClear.PerformClick() ' Reset the form for the next customer
+            ' Pass the current total to a public variable in the payment form
+            paymentForm.receivedTotal = Me.totalAmount
+
+            ' Optional: Pass the items list if you want it displayed there too
+            For Each item In listboxItem.Items
+                paymentForm.lstItems.Items.Add(item)
+            Next
+
+            ' Show the payment form
+            paymentForm.ShowDialog()
+
+            ' After the payment form is closed, clear the POS for the next customer
+            btnClear.PerformClick()
         Else
             MessageBox.Show("Cart is empty!", "Oops")
         End If

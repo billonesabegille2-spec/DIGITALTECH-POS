@@ -23,6 +23,7 @@ Partial Class Total_Items
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lstItems = New System.Windows.Forms.ListBox()
         Me.PanelPayment = New System.Windows.Forms.Panel()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
@@ -41,7 +42,6 @@ Partial Class Total_Items
         Me.btn8 = New System.Windows.Forms.Button()
         Me.btn7 = New System.Windows.Forms.Button()
         Me.lblPayment = New System.Windows.Forms.Label()
-        Me.lstItems = New System.Windows.Forms.ListBox()
         Me.Panel1.SuspendLayout()
         Me.PanelPayment.SuspendLayout()
         Me.SuspendLayout()
@@ -54,6 +54,14 @@ Partial Class Total_Items
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(312, 392)
         Me.Panel1.TabIndex = 0
+        '
+        'lstItems
+        '
+        Me.lstItems.FormattingEnabled = True
+        Me.lstItems.Location = New System.Drawing.Point(23, 15)
+        Me.lstItems.Name = "lstItems"
+        Me.lstItems.Size = New System.Drawing.Size(268, 355)
+        Me.lstItems.TabIndex = 0
         '
         'PanelPayment
         '
@@ -237,14 +245,6 @@ Partial Class Total_Items
         Me.lblPayment.Size = New System.Drawing.Size(67, 16)
         Me.lblPayment.TabIndex = 0
         Me.lblPayment.Text = "Payment"
-        '
-        'lstItems
-        '
-        Me.lstItems.FormattingEnabled = True
-        Me.lstItems.Location = New System.Drawing.Point(23, 15)
-        Me.lstItems.Name = "lstItems"
-        Me.lstItems.Size = New System.Drawing.Size(268, 355)
-        Me.lstItems.TabIndex = 0
         '
         'Total_Items
         '

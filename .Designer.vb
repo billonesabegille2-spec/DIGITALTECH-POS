@@ -347,7 +347,7 @@ Partial Class Register_Form
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PanelSeaShell)
         Me.Controls.Add(Me.PanelRed)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Register_Form"
         Me.Text = "Register_Form"
         Me.PanelRed.ResumeLayout(False)
