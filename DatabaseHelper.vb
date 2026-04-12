@@ -150,4 +150,24 @@ Public Class DatabaseHelper
             Throw ex
         End Try
     End Function
+    ' Update existing user password
+    Public Function UpdatePassword(username As String, oldPassword As String, newPassword As String) As Boolean
+        Try
+            Using conn As New SQLiteConnection(connectionString)
+                conn.Open()
+                ' Check if username and old password match
+                Dim sql As String = "UPDATE Users SET Password = @new WHERE Username = @u AND Password = @old"
+                Using cmd As New SQLiteCommand(sql, conn)
+                    cmd.Parameters.AddWithValue("@new", newPassword)
+                    cmd.Parameters.AddWithValue("@u", username)
+                    cmd.Parameters.AddWithValue("@old", oldPassword)
+
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                    Return rowsAffected > 0 ' Returns True if the update worked
+                End Using
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

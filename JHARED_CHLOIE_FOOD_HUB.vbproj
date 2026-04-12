@@ -176,7 +176,7 @@
       <DependentUpon>ChangePass.vb</DependentUpon>
     </Compile>
     <Compile Include="ChangePass.vb">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="DatabaseHelper.vb" />
     <Compile Include="Form2.Designer.vb">
@@ -239,6 +239,7 @@
     <Compile Include="frmviewprofile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserSession.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin Menu.resx">

@@ -19,7 +19,8 @@ Partial Class view_profile
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(view_profile))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnEditProfile = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BTNCHANGEPASS = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblAge = New System.Windows.Forms.Label()
         Me.lblBirthday = New System.Windows.Forms.Label()
@@ -27,31 +28,43 @@ Partial Class view_profile
         Me.btnLog = New System.Windows.Forms.Button()
         Me.lblViewProfile = New System.Windows.Forms.Label()
         Me.lblGoBack = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Firebrick
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.btnEditProfile)
+        Me.Panel1.Controls.Add(Me.BTNCHANGEPASS)
         Me.Panel1.Location = New System.Drawing.Point(0, -12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(207, 503)
         Me.Panel1.TabIndex = 0
         '
-        'btnEditProfile
+        'PictureBox1
         '
-        Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.btnEditProfile.ForeColor = System.Drawing.Color.White
-        Me.btnEditProfile.Location = New System.Drawing.Point(33, 249)
-        Me.btnEditProfile.Name = "btnEditProfile"
-        Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
-        Me.btnEditProfile.TabIndex = 1
-        Me.btnEditProfile.Text = "EDIT PROFILE"
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Enabled = False
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'BTNCHANGEPASS
+        '
+        Me.BTNCHANGEPASS.Font = New System.Drawing.Font("Microsoft Sans Serif", 5.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNCHANGEPASS.ForeColor = System.Drawing.Color.White
+        Me.BTNCHANGEPASS.Location = New System.Drawing.Point(41, 439)
+        Me.BTNCHANGEPASS.Name = "BTNCHANGEPASS"
+        Me.BTNCHANGEPASS.Size = New System.Drawing.Size(121, 32)
+        Me.BTNCHANGEPASS.TabIndex = 1
+        Me.BTNCHANGEPASS.Text = "CHANGE PASSWORD"
         '
         'Panel2
         '
@@ -123,19 +136,6 @@ Partial Class view_profile
         Me.lblGoBack.TabIndex = 0
         Me.lblGoBack.Text = "Go Back"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Enabled = False
-        Me.PictureBox1.ErrorImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'view_profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -148,11 +148,10 @@ Partial Class view_profile
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "view_profile"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -163,7 +162,7 @@ Partial Class view_profile
     Friend WithEvents lblAge As Label
     Friend WithEvents lblBirthday As Label
     Friend WithEvents lblGender As Label
-    Friend WithEvents btnEditProfile As Button
+    Friend WithEvents BTNCHANGEPASS As Button
     Friend WithEvents btnLog As Button
     Friend WithEvents lblViewProfile As Label
     Friend WithEvents lblGoBack As Label

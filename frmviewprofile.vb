@@ -55,8 +55,8 @@ Public Class view_profile
     End Sub
 
     ' Placeholder for Edit Profile logic
-    Private Sub BtnEditProfile_Click(sender As Object, e As EventArgs) Handles btnEditProfile.Click
-        ' Logic to open Edit_Profile form would go here
+    Private Sub BtnEditProfile_Click(sender As Object, e As EventArgs) Handles BTNCHANGEPASS.Click
+        ChangePass.Show()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
