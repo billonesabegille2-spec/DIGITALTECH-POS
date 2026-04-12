@@ -24,6 +24,7 @@ Partial Class frmpos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmpos))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.flowmenu = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnPlaceOrder = New System.Windows.Forms.Button()
@@ -34,7 +35,6 @@ Partial Class frmpos
         Me.lblName = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.flowmenu = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class frmpos
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.IndianRed
+        Me.Panel1.BackColor = System.Drawing.Color.Maroon
         Me.Panel1.Controls.Add(Me.flowmenu)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -51,11 +51,21 @@ Partial Class frmpos
         Me.Panel1.Size = New System.Drawing.Size(550, 426)
         Me.Panel1.TabIndex = 0
         '
+        'flowmenu
+        '
+        Me.flowmenu.AutoScroll = True
+        Me.flowmenu.BackColor = System.Drawing.Color.Brown
+        Me.flowmenu.Location = New System.Drawing.Point(10, 43)
+        Me.flowmenu.Name = "flowmenu"
+        Me.flowmenu.Size = New System.Drawing.Size(529, 371)
+        Me.flowmenu.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(7, 12)
+        Me.Label1.ForeColor = System.Drawing.Color.Yellow
+        Me.Label1.Location = New System.Drawing.Point(18, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(233, 18)
         Me.Label1.TabIndex = 0
@@ -159,13 +169,6 @@ Partial Class frmpos
         Me.btnClear.TabIndex = 1
         Me.btnClear.Text = "Clear All"
         Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'flowmenu
-        '
-        Me.flowmenu.Location = New System.Drawing.Point(10, 43)
-        Me.flowmenu.Name = "flowmenu"
-        Me.flowmenu.Size = New System.Drawing.Size(529, 371)
-        Me.flowmenu.TabIndex = 1
         '
         'frmpos
         '

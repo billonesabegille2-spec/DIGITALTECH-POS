@@ -18,7 +18,7 @@ Public Class admin_menu
     ' --- IMAGE SELECTION ---
     Private Sub btnSelectImage_Click(sender As Object, e As EventArgs) Handles btnSelectImage.Click
         Dim openFD As New OpenFileDialog()
-        openFD.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"
+        openFD.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*jfif"
 
         If openFD.ShowDialog() = DialogResult.OK Then
             PictureBox1.Image = Image.FromFile(openFD.FileName)

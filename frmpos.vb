@@ -106,4 +106,16 @@ Public Class frmpos
         totalAmount = 0
         UpdateTotalDisplay()
     End Sub
+
+    Private Sub flowmenu_Paint(sender As Object, e As PaintEventArgs) Handles flowmenu.Paint
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
