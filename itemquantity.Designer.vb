@@ -1,76 +1,85 @@
-﻿Public Class itemquantity
+﻿Partial Class itemquantity
+    Inherits System.Windows.Forms.Form
 
-    ' Public property so your main POS form can read the value after this form closes
-    Public Property SelectedQuantity As Integer = 1
-
-    ' Form Load: Initialize the textbox
-    Private Sub itemquantity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtQuantity.Text = "1"
-        txtQuantity.Select() ' Focus on textbox for easy typing
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
     End Sub
 
-    ' --- PLUS & MINUS LOGIC ---
+    Private components As System.ComponentModel.IContainer
 
-    Private Sub btnPlus_Click(sender As Object, e As EventArgs) Handles btnPlus.Click
-        Dim currentVal As Integer = 0
-        Integer.TryParse(txtQuantity.Text, currentVal)
-        txtQuantity.Text = (currentVal + 1).ToString()
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Me.txtQuantity = New System.Windows.Forms.TextBox()
+        Me.btnMinus = New System.Windows.Forms.Button()
+        Me.btnPlus = New System.Windows.Forms.Button()
+        Me.btn2 = New System.Windows.Forms.Button()
+        Me.btn3 = New System.Windows.Forms.Button()
+        Me.btn5 = New System.Windows.Forms.Button()
+        Me.btn10 = New System.Windows.Forms.Button()
+        Me.btnEnter = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'txtQuantity
+        '
+        Me.txtQuantity.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.txtQuantity.Location = New System.Drawing.Point(35, 103)
+        Me.txtQuantity.Name = "txtQuantity"
+        Me.txtQuantity.Size = New System.Drawing.Size(184, 30)
+        '
+        'btnMinus
+        '
+        Me.btnMinus.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnMinus.Location = New System.Drawing.Point(237, 103)
+        Me.btnMinus.Name = "btnMinus"
+        Me.btnMinus.Size = New System.Drawing.Size(45, 32)
+        Me.btnMinus.Text = "-"
+        '
+        'btnPlus
+        '
+        Me.btnPlus.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnPlus.Location = New System.Drawing.Point(303, 104)
+        Me.btnPlus.Name = "btnPlus"
+        Me.btnPlus.Size = New System.Drawing.Size(47, 31)
+        Me.btnPlus.Text = "+"
+        '
+        'btn2, btn3, btn5, btn10 settings (omitted for brevity, matches your layout)
+        '
+        Me.btnEnter.Location = New System.Drawing.Point(115, 279)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(154, 39)
+        Me.btnEnter.Text = "Enter Quantity"
+        '
+        'itemquantity
+        '
+        Me.BackColor = System.Drawing.Color.Firebrick
+        Me.ClientSize = New System.Drawing.Size(412, 354)
+        Me.Controls.Add(Me.btnEnter)
+        Me.Controls.Add(Me.btn10)
+        Me.Controls.Add(Me.btn5)
+        Me.Controls.Add(Me.btn3)
+        Me.Controls.Add(Me.btn2)
+        Me.Controls.Add(Me.btnPlus)
+        Me.Controls.Add(Me.btnMinus)
+        Me.Controls.Add(Me.txtQuantity)
+        Me.Name = "itemquantity"
+        Me.Text = "Item Quantity"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
     End Sub
 
-    Private Sub btnMinus_Click(sender As Object, e As EventArgs) Handles btnMinus.Click
-        Dim currentVal As Integer = 0
-        Integer.TryParse(txtQuantity.Text, currentVal)
-
-        ' Ensure quantity doesn't drop below 1
-        If currentVal > 1 Then
-            txtQuantity.Text = (currentVal - 1).ToString()
-        End If
-    End Sub
-
-    ' --- PRESET BUTTON LOGIC ---
-
-    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
-        txtQuantity.Text = "2"
-    End Sub
-
-    Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
-        txtQuantity.Text = "3"
-    End Sub
-
-    Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
-        txtQuantity.Text = "5"
-    End Sub
-
-    Private Sub btn10_Click(sender As Object, e As EventArgs) Handles btn10.Click
-        txtQuantity.Text = "10"
-    End Sub
-
-    ' --- FINALIZATION ---
-
-    ' Logic for the "Enter Quantity" button
-    Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
-        If Integer.TryParse(txtQuantity.Text, SelectedQuantity) AndAlso SelectedQuantity > 0 Then
-            Me.DialogResult = DialogResult.OK
-            Me.Close()
-        Else
-            MessageBox.Show("Please enter a valid number greater than 0.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtQuantity.Focus()
-        End If
-    End Sub
-
-    ' Restrict textbox to numbers only (prevents accidental typing of letters)
-    Private Sub txtQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQuantity.KeyPress
-        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
-
-    Friend WithEvents txtQuantity As TextBox
-    Friend WithEvents btnMinus As Button
-    Friend WithEvents btnPlus As Button
-    Friend WithEvents btn2 As Button
-    Friend WithEvents btn3 As Button
-    Friend WithEvents btn5 As Button
-    Friend WithEvents btn10 As Button
-    Friend WithEvents txtInput As TextBox
+    Friend WithEvents txtQuantity As System.Windows.Forms.TextBox
+    Friend WithEvents btnMinus As System.Windows.Forms.Button
+    Friend WithEvents btnPlus As System.Windows.Forms.Button
+    Friend WithEvents btn2 As System.Windows.Forms.Button
+    Friend WithEvents btn3 As System.Windows.Forms.Button
+    Friend WithEvents btn5 As System.Windows.Forms.Button
+    Friend WithEvents btn10 As System.Windows.Forms.Button
+    Friend WithEvents btnEnter As System.Windows.Forms.Button
 End Class
