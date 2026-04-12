@@ -17,9 +17,9 @@ Partial Class view_profile
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(view_profile))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnEditProfile = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblAge = New System.Windows.Forms.Label()
         Me.lblBirthday = New System.Windows.Forms.Label()
@@ -27,16 +27,17 @@ Partial Class view_profile
         Me.btnLog = New System.Windows.Forms.Button()
         Me.lblViewProfile = New System.Windows.Forms.Label()
         Me.lblGoBack = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel1.Controls.Add(Me.btnEditProfile)
         Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.btnEditProfile)
         Me.Panel1.Location = New System.Drawing.Point(0, -12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(207, 503)
@@ -45,21 +46,12 @@ Partial Class view_profile
         'btnEditProfile
         '
         Me.btnEditProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.btnEditProfile.ForeColor = System.Drawing.Color.Firebrick
-        Me.btnEditProfile.Location = New System.Drawing.Point(43, 426)
+        Me.btnEditProfile.ForeColor = System.Drawing.Color.White
+        Me.btnEditProfile.Location = New System.Drawing.Point(33, 249)
         Me.btnEditProfile.Name = "btnEditProfile"
         Me.btnEditProfile.Size = New System.Drawing.Size(121, 32)
         Me.btnEditProfile.TabIndex = 1
         Me.btnEditProfile.Text = "EDIT PROFILE"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Panel2
         '
@@ -75,27 +67,30 @@ Partial Class view_profile
         'lblAge
         '
         Me.lblAge.AutoSize = True
+        Me.lblAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAge.Location = New System.Drawing.Point(32, 163)
         Me.lblAge.Name = "lblAge"
-        Me.lblAge.Size = New System.Drawing.Size(29, 13)
+        Me.lblAge.Size = New System.Drawing.Size(50, 24)
         Me.lblAge.TabIndex = 0
         Me.lblAge.Text = "Age:"
         '
         'lblBirthday
         '
         Me.lblBirthday.AutoSize = True
-        Me.lblBirthday.Location = New System.Drawing.Point(32, 69)
+        Me.lblBirthday.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBirthday.Location = New System.Drawing.Point(32, 102)
         Me.lblBirthday.Name = "lblBirthday"
-        Me.lblBirthday.Size = New System.Drawing.Size(48, 13)
+        Me.lblBirthday.Size = New System.Drawing.Size(82, 24)
         Me.lblBirthday.TabIndex = 1
         Me.lblBirthday.Text = "Birthday:"
         '
         'lblGender
         '
         Me.lblGender.AutoSize = True
+        Me.lblGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGender.Location = New System.Drawing.Point(32, 31)
         Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(45, 13)
+        Me.lblGender.Size = New System.Drawing.Size(79, 24)
         Me.lblGender.TabIndex = 2
         Me.lblGender.Text = "Gender:"
         '
@@ -120,12 +115,26 @@ Partial Class view_profile
         '
         'lblGoBack
         '
+        Me.lblGoBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGoBack.ForeColor = System.Drawing.Color.Firebrick
-        Me.lblGoBack.Location = New System.Drawing.Point(438, 27)
+        Me.lblGoBack.Location = New System.Drawing.Point(603, 48)
         Me.lblGoBack.Name = "lblGoBack"
         Me.lblGoBack.Size = New System.Drawing.Size(100, 23)
         Me.lblGoBack.TabIndex = 0
         Me.lblGoBack.Text = "Go Back"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Enabled = False
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 69)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(108, 90)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'view_profile
         '
@@ -141,9 +150,9 @@ Partial Class view_profile
         Me.Name = "view_profile"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

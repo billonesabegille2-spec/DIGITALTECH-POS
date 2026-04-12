@@ -366,6 +366,12 @@
   <ItemGroup>
     <None Include="Resources\istockphoto-2171382633-612x6121.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%291.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

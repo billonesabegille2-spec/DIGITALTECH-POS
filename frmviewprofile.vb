@@ -63,15 +63,15 @@ Public Class view_profile
 
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub lblBirthday_Click(sender As Object, e As EventArgs) Handles lblBirthday.Click
+
+    End Sub
+
+    Private Sub lblGender_Click(sender As Object, e As EventArgs) Handles lblGender.Click
 
     End Sub
 
     Private Sub lblAge_Click(sender As Object, e As EventArgs) Handles lblAge.Click
-
-    End Sub
-
-    Private Sub lblBirthday_Click(sender As Object, e As EventArgs) Handles lblBirthday.Click
 
     End Sub
 End Class

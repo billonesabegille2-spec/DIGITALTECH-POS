@@ -95,8 +95,8 @@ Public Class frmpos
     End Sub
 
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btndot.Click
-        Dim admin As New admin_menu()
-        admin.ShowDialog()
+        Dim profile As New view_profile()
+        profile.ShowDialog()
         ' Immediately refresh the menu to show any new items added in Admin
         RefreshDynamicMenu()
     End Sub
