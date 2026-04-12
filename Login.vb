@@ -45,9 +45,7 @@ Public Class Login
 
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-
-        Dim reg As New Admin_Menu()
-        reg.ShowDialog()
+        Register_Form.Show()
     End Sub
 
 End Class

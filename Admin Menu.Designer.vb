@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Admin_Menu
+Partial Class admin_menu
     Inherits System.Windows.Forms.Form
 
 

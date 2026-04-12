@@ -6,7 +6,7 @@
         txtQuantity.Select()
     End Sub
 
-    ' ... (Put all your Click and KeyPress events here) ...
+
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         If Integer.TryParse(txtQuantity.Text, SelectedQuantity) AndAlso SelectedQuantity > 0 Then
