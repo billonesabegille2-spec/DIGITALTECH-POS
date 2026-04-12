@@ -1,26 +1,72 @@
-﻿Public Class frmpos
-    ' Variable to keep track of the running total
-    Private totalAmount As Decimal = 0
+﻿Imports System.Data.SQLite
+Imports System.IO
 
-    ' This runs as soon as the POS form opens
+Public Class frmpos
+    Private totalAmount As Decimal = 0
+    ' Initialize your database helper (ensure the filename matches your login/admin setup)
+    Private db As New DatabaseHelper("foodhub.db")
+
     Private Sub frmpos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Display the name saved during the Login process
+        ' Display Cashier Name from GlobalData
         If String.IsNullOrEmpty(GlobalData.CurrentUser) Then
             lblName.Text = "Cashier: Unknown"
         Else
             lblName.Text = "Cashier: " & GlobalData.CurrentUser
         End If
+
+        ' Load products directly from the database
+        RefreshDynamicMenu()
     End Sub
 
-    ' Helper method to add items and update total
+    ' --- DATABASE-DRIVEN MENU LOGIC ---
+    Public Sub RefreshDynamicMenu()
+        If flowmenu IsNot Nothing Then
+            flowmenu.Controls.Clear()
+
+            ' Get all products using the helper method from your DatabaseHelper
+            Dim dt As DataTable = db.GetAllProducts()
+
+            For Each row As DataRow In dt.Rows
+                Dim btn As New Button()
+                btn.Size = New Size(110, 110)
+
+                ' Set text with Price from Database
+                btn.Text = row("ItemName").ToString() & vbCrLf & "₱" & row("ItemPrice").ToString()
+                btn.Tag = row("ItemPrice")
+
+                ' Apply your theme colors
+                btn.BackColor = Color.IndianRed
+                btn.ForeColor = Color.White
+                btn.TextAlign = ContentAlignment.BottomCenter
+
+                ' Load Image from Database BLOB if it exists
+                If Not IsDBNull(row("ItemImage")) Then
+                    Dim imgData As Byte() = DirectCast(row("ItemImage"), Byte())
+                    Using ms As New MemoryStream(imgData)
+                        btn.BackgroundImage = Image.FromStream(ms)
+                        btn.BackgroundImageLayout = ImageLayout.Zoom
+                    End Using
+                End If
+
+                ' Add the click event
+                AddHandler btn.Click, AddressOf DynamicItem_Click
+                flowmenu.Controls.Add(btn)
+            Next
+        End If
+    End Sub
+
+    ' --- EVENT HANDLERS ---
+    Private Sub DynamicItem_Click(sender As Object, e As EventArgs)
+        Dim btn = DirectCast(sender, Button)
+        ' Split by the Peso sign to get only the name
+        Dim itemName As String = btn.Text.Split("₱")(0).Trim()
+        Dim price As Decimal = CDec(btn.Tag)
+        AddToCart(itemName, price)
+    End Sub
+
     Private Sub AddToCart(itemName As String, price As Decimal)
-        ' Add to the ListBox with Peso formatting
         listboxItem.Items.Add(String.Format("{0} - ₱{1:N2}", itemName, price))
-
-        ' Add to the total variable
         totalAmount += price
-
-        ' Update the label
         UpdateTotalDisplay()
     End Sub
 
@@ -28,62 +74,31 @@
         lblTotal.Text = String.Format("Total: ₱{0:N2}", totalAmount)
     End Sub
 
-    ' --- CHICKEN ITEM BUTTONS ---
-    Private Sub BTNWHOLE_Click(sender As Object, e As EventArgs) Handles BTNWHOLE.Click
-        AddToCart("Whole Chicken", 230.0)
-    End Sub
-
-    Private Sub btnhalf_Click(sender As Object, e As EventArgs) Handles btnhalf.Click
-        AddToCart("Half Chicken", 115.0)
-    End Sub
-
-    Private Sub btnhita_Click(sender As Object, e As EventArgs) Handles btnhita.Click
-        AddToCart("Hita", 56.0)
-    End Sub
-
-    Private Sub btndrumstick_Click(sender As Object, e As EventArgs) Handles btndrumstick.Click
-        AddToCart("Drumstick", 27.0)
-    End Sub
-
-    Private Sub btnneck_Click(sender As Object, e As EventArgs) Handles btnneck.Click
-        AddToCart("Neck", 12.0)
-    End Sub
-
-    Private Sub btnwings_Click(sender As Object, e As EventArgs) Handles btnwings.Click
-        AddToCart("Wings", 23.0)
-    End Sub
-
-    Private Sub btnpitso_Click(sender As Object, e As EventArgs) Handles btnpitso.Click
-        AddToCart("Pitso", 36.0)
-    End Sub
-
-    Private Sub btnthigh_Click(sender As Object, e As EventArgs) Handles btnthigh.Click
-        AddToCart("Thigh", 29.0)
-    End Sub
-
     ' --- ACTION BUTTONS ---
-
     Private Sub btnPlaceOrder_Click(sender As Object, e As EventArgs) Handles btnPlaceOrder.Click
         If listboxItem.Items.Count > 0 Then
-            ' Create an instance of the payment form
             Dim paymentForm As New Total_Items()
-
-            ' Pass the current total to a public variable in the payment form
             paymentForm.receivedTotal = Me.totalAmount
 
-            ' Optional: Pass the items list if you want it displayed there too
+            ' Pass items to the listbox on the payment form
             For Each item In listboxItem.Items
                 paymentForm.lstItems.Items.Add(item)
             Next
 
-            ' Show the payment form
-            paymentForm.ShowDialog()
-
-            ' After the payment form is closed, clear the POS for the next customer
-            btnClear.PerformClick()
+            ' Clear cart only if payment was confirmed (DialogResult.OK)
+            If paymentForm.ShowDialog() = DialogResult.OK Then
+                btnClear.PerformClick()
+            End If
         Else
             MessageBox.Show("Cart is empty!", "Oops")
         End If
+    End Sub
+
+    Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btndot.Click
+        Dim admin As New admin_menu()
+        admin.ShowDialog()
+        ' Immediately refresh the menu to show any new items added in Admin
+        RefreshDynamicMenu()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -91,19 +106,4 @@
         totalAmount = 0
         UpdateTotalDisplay()
     End Sub
-
-    Private Sub btndot_Click(sender As Object, e As EventArgs) Handles btndot.Click
-
-        view_profile.Show()
-    End Sub
-
-    Private Sub lblName_Click(sender As Object, e As EventArgs) Handles lblName.Click
-
-        lblName.Text = "Cashier: " & GlobalData.CurrentUser
-    End Sub
-
-    Private Sub listboxItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listboxItem.SelectedIndexChanged
-
-    End Sub
-
 End Class

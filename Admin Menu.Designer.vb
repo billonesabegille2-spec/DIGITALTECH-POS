@@ -43,10 +43,6 @@ Partial Class admin_menu
         Me.PanelDown = New System.Windows.Forms.Panel()
         Me.lblList = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.pic = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnItemName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblAdmin = New System.Windows.Forms.Label()
         Me.lblClose = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -288,31 +284,10 @@ Partial Class admin_menu
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.pic, Me.ColumnItemName, Me.Price, Me.Stock})
         Me.DataGridView1.Location = New System.Drawing.Point(32, 23)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(437, 150)
         Me.DataGridView1.TabIndex = 0
-        '
-        'pic
-        '
-        Me.pic.HeaderText = "Item Pic"
-        Me.pic.Name = "pic"
-        '
-        'ColumnItemName
-        '
-        Me.ColumnItemName.HeaderText = "Name"
-        Me.ColumnItemName.Name = "ColumnItemName"
-        '
-        'Price
-        '
-        Me.Price.HeaderText = "Price"
-        Me.Price.Name = "Price"
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stock"
-        Me.Stock.Name = "Stock"
         '
         'lblAdmin
         '
@@ -385,10 +360,6 @@ Partial Class admin_menu
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents pic As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnItemName As DataGridViewTextBoxColumn
-    Friend WithEvents Price As DataGridViewTextBoxColumn
-    Friend WithEvents Stock As DataGridViewTextBoxColumn
     Friend WithEvents lblDetails As Label
     Friend WithEvents lblList As Label
     Friend WithEvents lblClose As Label
